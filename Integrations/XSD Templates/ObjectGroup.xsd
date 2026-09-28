@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+           xmlns:tns="http://xmlns.oracle.com/pcbpel/nxsd/ObjectGroup"
+           targetNamespace="http://xmlns.oracle.com/pcbpel/nxsd/ObjectGroup"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           nxsd:version="NXSD"
+           nxsd:type="delimited"
+           nxsd:stream="chars"
+           nxsd:encoding="UTF-8">
+
+  <!-- Oracle Integration Cloud (OIC) Pipe-Delimited NXSD Template File -->
+  <xs:element name="ObjectGroupFile">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- METADATA Record Group: ObjectGroup -->
+        <xs:element name="ObjectGroupGroup" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ObjectGroupMetadataHeader" minOccurs="0" maxOccurs="1" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroup" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupTypeCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="StartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="StaticDynamicFlag" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Description" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ObjectGroupDataRecord" minOccurs="0" maxOccurs="unbounded" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroup" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupTypeCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="StartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="StaticDynamicFlag" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Description" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!-- METADATA Record Group: ObjectGroupAmend -->
+        <xs:element name="ObjectGroupAmendGroup" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+               <xs:element name="ObjectGroupAmendMetadataHeader" minOccurs="0" maxOccurs="1" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupAmend" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupAmendId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupLevelName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="IncludeOrExclude" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ObjectGroupAmendDataRecord" minOccurs="0" maxOccurs="unbounded" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupAmend" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupAmendId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectGroupLevelName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ObjectCode" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="IncludeOrExclude" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
