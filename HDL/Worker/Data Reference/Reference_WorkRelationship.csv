@@ -1,0 +1,39 @@
+Attribute Name,Attribute Label,Original Value,Current Value
+NewStartDate,New Start Date,,
+DateOfDeath,Date of Death,,
+HideUntilDate,Hide Until Date,,
+DateForPrimaryFlagChange,Date for Primary Work Relationship Change,,
+LegalEmployerSeniorityDate,Legal Employer Seniority Date,,
+ActualTerminationDate,Actual Termination Date,,
+EnterpriseSeniorityDate,Enterprise Seniority Date,,
+LastWorkingDate,Last Working Date,,
+NotifiedTerminationDate,Notified Termination Date,,
+ProjectedTerminationDate,Projected Termination Date,,
+LegalEntityId,Legal Entity ID,,
+Comments,Comments,,
+OnMilitaryServiceFlag,On Military Service,,
+PrimaryFlag,Primary Employment,Y,Y
+RehireAuthorizerPersonId,Recommendation Authorized by Person ID,,
+RevokeUserAccess,Revoke User Access,,
+WorkerNumber,Worker Number,,
+WorkerComments,Worker Comments,,
+ActionCode,Action Code,,
+ReasonCode,Reason Code,,
+CancelWorkRelationshipFlag,Cancel Work Relationship,,
+TerminateWorkRelationshipFlag,Terminate Work Relationship,,
+ReverseTerminationFlag,Reverse Termination,,
+CorrectTerminationFlag,Correct Termination,,
+GlobalTransferFlag,Global Transfer,,
+ReadyToConvert,Ready To Convert,,
+RehireAuthorizor,Recommendation Authorized by Person Number,,
+RehireReason,Recommendation Reason,,
+RehireRecommendationFlag,Rehire Recommendation,,
+DateStart,Start Date,2023/01/01,2023/01/01
+PeriodOfServiceId,Period of Service ID,,
+PersonId,Person ID,,
+LegalEmployerName,Legal Employer,US1 Legal Entity,US1 Legal Entity
+WorkerType,Worker Type,E,E
+GUID,Globally Unique ID,,
+SourceSystemId,Source System ID,wrl_2SAiOlL1mEfGaqI266Zz2XA,wrl_2SAiOlL1mEfGaqI266Zz2XA
+SourceSystemOwner,Source System Owner,HRC_SQLLOADER,HRC_SQLLOADER
+PersonNumber,Person Number,,

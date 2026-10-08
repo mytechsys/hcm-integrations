@@ -1,0 +1,19 @@
+Attribute Name,Attribute Label,Original Value,Current Value
+StartDate,Start Date,2023/01/01,2023/01/01
+DateOfBirth,Date of Birth,,
+DateOfDeath,Date of Death,,
+BloodType,Blood type,,
+CorrespondenceLanguage,Correspondence Language,,
+ActionCode,Action Code,HIRE,HIRE
+ReasonCode,Reason Code,,
+PersonDuplicateCheck,Duplicate Person Record Check,,
+CountryOfBirth,Country of Birth,,
+RegionOfBirth,Region of Birth,,
+TownOfBirth,Town of Birth,,
+EffectiveEndDate,Effective End Date,4712/12/31,4712/12/31
+EffectiveStartDate,Effective Start Date,2023/01/01,2023/01/01
+PersonId,Person ID,100002645798929,100002645798929
+SourceSystemOwner,Source System Owner,HRC_SQLLOADER,HRC_SQLLOADER
+SourceSystemId,Source System ID,wkr_2SAiOlL1mEfGaqI266Zz2XA,wkr_2SAiOlL1mEfGaqI266Zz2XA
+GUID,Globally Unique ID,,
+PersonNumber,Person Number,,

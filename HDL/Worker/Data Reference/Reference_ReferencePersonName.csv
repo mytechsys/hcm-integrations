@@ -1,0 +1,52 @@
+Attribute Name,Attribute Label,Original Value,Current Value
+LegislationCode,Legislation Code,US,US
+CharSetContext,Character Set Context,,
+NameInformation1,Name Information 1,,
+NameInformation2,Name Information 2,,
+NameInformation3,Name Information 3,,
+NameInformation4,Name Information 4,,
+NameInformation5,Name Information 5,,
+NameInformation6,Name Information 6,,
+NameInformation7,Name Information 7,,
+NameInformation8,Name Information 8,,
+NameInformation9,Name Information 9,,
+NameInformation10,Name Information 10,,
+NameInformation11,Name Information 11,,
+NameInformation12,Name Information 12,,
+NameInformation13,Name Information 13,,
+NameInformation14,Name Information 14,,
+NameInformation15,Name Information 15,,
+NameInformation16,Name Information 16,,
+NameInformation17,Name Information 17,,
+NameInformation18,Name Information 18,,
+NameInformation19,Name Information 19,,
+NameInformation20,Name Information 20,,
+NameInformation21,Name Information 21,,
+NameInformation22,Name Information 22,,
+NameInformation23,Name Information 23,,
+NameInformation24,Name Information 24,,
+NameInformation25,Name Information 25,,
+NameInformation26,Name Information 26,,
+NameInformation27,Name Information 27,,
+NameInformation28,Name Information 28,,
+NameInformation29,Name Information 29,,
+NameInformation30,Name Information 30,,
+FirstName,First Name,Henry,Henry
+MiddleNames,Middle Names,,
+LastName,Last Name,Cavill,Cavill
+Honors,Honors,,
+KnownAs,Preferred Name,,
+PreNameAdjunct,Prefix,,
+MilitaryRank,Military Rank,,
+PreviousLastName,Previous Last Name,,
+Suffix,Suffix,,
+Title,Title,,
+EffectiveEndDate,Effective End Date,4712/12/31,4712/12/31
+EffectiveStartDate,Effective Start Date,2023/01/01,2023/01/01
+PersonNameId,Person Name ID,,
+PersonId,Person ID,,
+NameType,Name Type,GLOBAL,GLOBAL
+SourceSystemOwner,Source System Owner,HRC_SQLLOADER,HRC_SQLLOADER
+SourceSystemId,Source System ID,prn_2SAiOlL1mEfGaqI266Zz2XA,prn_2SAiOlL1mEfGaqI266Zz2XA
+GUID,Globally Unique ID,,
+PersonNumber,Person Number,,
