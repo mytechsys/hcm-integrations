@@ -1,0 +1,272 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : ExternalIdentifier 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : SKF-018: AssignmentId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Assignment: [Worker,V2,WorkTerms, Worker,V2,Assignment]. 
+  CAT 1 FAIL : UKF-001: AssignmentId - AssignmentId - This surrogate key attribute should not be included in the user key. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : External Identifier 
+  UI_DESCRIPTION             : A person's identifier in an external application. For example a third-party payroll identifier, or a time device badge 
+                               identifier. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : ExternalIdentifier 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.ExternalIdentifierVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : ExternalIdentifier 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : ExternalIdentifier 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : Simple Dated 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ExternalIdentifierId                PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_EXT_APP_IDENTIFIERS        EXT_IDENTIFIER_ID 
+  ExternalIdentifierSequence          PVAL002                   (null)                 (null)                 Number        4 (null) True      For new records PER_EXT_APP_IDENTIFIERS        EXT_IDENTIFIER_SEQ 
+  PersonId                            PVAL003                   PVAL013                PVAL014                Number       18 (null) True      Yes             PER_EXT_APP_IDENTIFIERS        PERSON_ID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  ExternalIdentifierNumber            PVAL005                   (null)                 (null)                 String      256        True      For new records PER_EXT_APP_IDENTIFIERS        EXT_IDENTIFIER_NUMBER 
+  ExternalIdentifierType              PVAL006                   (null)                 (null)                 String       30        True      For new records PER_EXT_APP_IDENTIFIERS        EXT_IDENTIFIER_TYPE 
+  AssignmentId                        PVAL007                   PVAL015                PVAL016                Number       18 (null) False     No              PER_EXT_APP_IDENTIFIERS        ASSIGNMENT_ID 
+  AssignmentNumber                    PVAL008                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  DateFrom                            PTIMESTAMP001             (null)                 (null)                 Datetime               True      For new records PER_EXT_APP_IDENTIFIERS        DATE_FROM 
+  DateTo                              PTIMESTAMP002             (null)                 (null)                 Datetime               False     No              PER_EXT_APP_IDENTIFIERS        DATE_TO 
+  Comments                            PVAL009                   (null)                 (null)                 String     2048        False     No              PER_EXT_APP_IDENTIFIERS        COMMENTS 
+  SourceSystemId                      PVAL010                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL011                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  GUID                                PVAL012                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  EnterpriseId                        java.lang.Long         PER_EXT_APP_IDENTIFIERS        ENTERPRISE_ID                  ___SDO_HIDDEN___Specific_Reject 
+  ObjectVersionNumber                 java.lang.Integer      PER_EXT_APP_IDENTIFIERS        OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  Worker                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  Person                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : [AssignmentNumber] 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ExternalIdentifierId                   DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.ExternalIdentifierVO 
+                                           DLoadLOVDisplayAttributes        : [PersonId,ExternalIdentifierSequence] 
+                                           DLoadLOVReturnAttributes         : ExternalIdentifierId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDCUSTOMVC__PER_MANAGE_PERSON_IDENTIFIERS_FOR_EXTERNAL_APPLICATIONS_DATA__PER_ALL_PEOPLE_F__ExternalIdentifierEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.helper.PersonKeyHelperNDEVO 
+                                           DLoadLOVDisplayAttributes        : [PersonNumber] 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_IDENTIFIERS_FOR_EXTERNAL_APPLICATIONS_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.people.core.protectedModel.entity.ExternalIdentifierEO 
+     Table/View             : PER_EXT_APP_IDENTIFIERS 
+     Updateable             : True 
+     Integration Object Name: ExternalIdentifier 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_EXT_APP_IDENTIFIERS        HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ExternalIdentifierId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ExternalIdentifierId 
+  Integration Object Name: ExternalIdentifier 
+  User Keys 
+    [0] PersonNumber(secure), ExternalIdentifierSequence 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002 
+    [1] ExternalIdentifierSequence, PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    ExternalIdentifierSequence     PER_EXT_APP_IDENTIFIERS        EXT_IDENTIFIER_SEQ             Local EO 
+    PersonId                       PER_EXT_APP_IDENTIFIERS        PERSON_ID                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : AssignmentId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Assignment 
+    Identified by        : DLoadForeignIntegration property [Assignment;AssignmentId] 
+                           EO association usage 
+  Referenced Table/View  : PER_ALL_ASSIGNMENTS_M 
+  Referenced Column      : ASSIGNMENT_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKF-018: AssignmentId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the 
+                             Integration Object Name Assignment: [Worker,V2,WorkTerms, Worker,V2,Assignment]. 
+ 
+    [0] DateFrom, AssignmentNumber 
+    [1] DateFrom, AssignmentId 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    DateFrom 
+    AssignmentNumber 
+    AssignmentId 
+      ** CAT 1 FAIL : UKF-001: AssignmentId - AssignmentId - This surrogate key attribute should not be included in the user key. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  ExternalIdentifierType         ORA_PER_EXT_IDENTIFIER_TYPES 
+ 
+ 
