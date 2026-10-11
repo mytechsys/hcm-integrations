@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+           xmlns:tns="http://xmlns.oracle.com/pcbpel/nxsd/ElementEntryWithCosting"
+           targetNamespace="http://xmlns.oracle.com/pcbpel/nxsd/ElementEntryWithCosting"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           nxsd:version="NXSD"
+           nxsd:type="delimited"
+           nxsd:stream="chars"
+           nxsd:encoding="UTF-8">
+
+  <!-- Oracle Integration Cloud (OIC) Pipe-Delimited NXSD Template File -->
+  <xs:element name="ElementEntryWithCostingFile">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- METADATA Record Group: ElementEntryWithCosting -->
+        <xs:element name="ElementEntryWithCostingGroup" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ElementEntryWithCostingMetadataHeader" minOccurs="0" maxOccurs="1" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryWithCosting" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Reason" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Subpriority" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntrySequence" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="CreateEntrySequence" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName31" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName32" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName33" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName34" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName35" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName36" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName37" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName38" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName39" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName40" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue31" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue32" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue33" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue34" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue35" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue36" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue37" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue38" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue39" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue40" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ElementEntryWithCostingDataRecord" minOccurs="0" maxOccurs="unbounded" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryWithCosting" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Reason" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Subpriority" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntrySequence" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="CreateEntrySequence" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName31" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName32" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName33" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName34" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName35" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName36" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName37" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName38" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName39" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName40" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue31" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue32" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue33" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue34" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue35" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue36" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue37" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue38" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue39" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue40" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment1" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment10" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment11" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment12" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment13" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment14" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment15" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment16" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment17" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment18" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment19" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment2" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment20" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment21" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment22" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment23" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment24" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment25" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment26" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment27" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment28" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment29" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment3" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment30" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment4" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment5" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment6" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment7" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment8" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Segment9" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

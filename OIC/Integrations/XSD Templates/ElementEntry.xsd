@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:nxsd="http://xmlns.oracle.com/pcbpel/nxsd"
+           xmlns:tns="http://xmlns.oracle.com/pcbpel/nxsd/ElementEntry"
+           targetNamespace="http://xmlns.oracle.com/pcbpel/nxsd/ElementEntry"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           nxsd:version="NXSD"
+           nxsd:type="delimited"
+           nxsd:stream="chars"
+           nxsd:encoding="UTF-8">
+
+  <!-- Oracle Integration Cloud (OIC) Pipe-Delimited NXSD Template File -->
+  <xs:element name="ElementEntryFile">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- METADATA Record Group: ElementEntry -->
+        <xs:element name="ElementEntryGroup" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ElementEntryMetadataHeader" minOccurs="0" maxOccurs="1" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntry" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="CreatorType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="DateEarned" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Reason" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Subpriority" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="MultipleEntryCount" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="HrAssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ElementEntryDataRecord" minOccurs="0" maxOccurs="unbounded" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntry" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="CreatorType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="DateEarned" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Reason" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="Subpriority" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="MultipleEntryCount" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="HrAssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+	  <!-- METADATA Record Group: ElementEntryValue -->
+        <xs:element name="ElementEntryValueGroup" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ElementEntryValueMetadataHeader" minOccurs="0" maxOccurs="1" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryValue" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryValueId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="MultipleEntryCount" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="HrAssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ElementEntryValueDataRecord" minOccurs="0" maxOccurs="unbounded" nxsd:cellSeparatedBy="|" nxsd:arrayTerminatedBy="${eol}">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="METADATA" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryValue" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveEndDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EffectiveStartDate" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryValueId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="InputValueName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ScreenEntryValue" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementEntryId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentNumber" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementTypeId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="ElementName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="LegislativeDataGroupName" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemOwner" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="SourceSystemId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="GUID" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="MultipleEntryCount" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="AssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="EntryType" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="|"/>
+                    <xs:element name="HrAssignmentId" type="xs:string" nxsd:style="terminated" nxsd:terminatedBy="${eol}"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
