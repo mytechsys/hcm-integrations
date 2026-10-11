@@ -1,0 +1,267 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : AssignmentExtraInfo 
+Version                 : V2 
+Hierarchy Level         : 5 
+Parent Discriminator    : Assignment 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : ATT-002: EffectiveLatestChange - The multiple changes per day attribute is invalid as this is not an MCPD object. 
+  CAT 2 FAIL : ATT-002: EffectiveSequence - The multiple changes per day attribute is invalid as this is not an MCPD object. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Assignment Extra Information 
+  UI_DESCRIPTION             : The extra information captured about the assignment using the configurable structure of the Assignment extensible flexfield. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : AssignmentExtraInfo 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.view.AssignmentExtraInfoVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : AssignmentExtraInfoVO 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : AssignmentExtraInfo 
+  Parent Object              : Assignment 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : Yes 
+  Adjust Logical End Date    : Yes 
+  User Key DE Override       : No 
+  Flexfield support          : EFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AeiInformationCategory              PVAL002                   (null)                 (null)                 String       30        False     No              PER_ASSIGNMENT_EXTRA_INFO_M    AEI_INFORMATION_CATEGORY 
+  AssignmentExtraInfoId               PVAL003                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ASSIGNMENT_EXTRA_INFO_M    ASSIGNMENT_EXTRA_INFO_ID 
+  AssignmentId                        PVAL004                   PVAL013                PVAL014                Number       18 (null) True      Yes             PER_ASSIGNMENT_EXTRA_INFO_M    ASSIGNMENT_ID 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_ASSIGNMENT_EXTRA_INFO_M    EFFECTIVE_END_DATE 
+  EffectiveLatestChange               PVAL005                   (null)                 (null)                 String       30        True      For new records PER_ASSIGNMENT_EXTRA_INFO_M    EFFECTIVE_LATEST_CHANGE 
+    ** CAT 2 FAIL : ATT-002: EffectiveLatestChange - The multiple changes per day attribute is invalid as this is not an MCPD object. 
+ 
+  EffectiveSequence                   PVAL006                   (null)                 (null)                 Number        4 (null) True      For new records PER_ASSIGNMENT_EXTRA_INFO_M    EFFECTIVE_SEQUENCE 
+    ** CAT 2 FAIL : ATT-002: EffectiveSequence - The multiple changes per day attribute is invalid as this is not an MCPD object. 
+ 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_ASSIGNMENT_EXTRA_INFO_M    EFFECTIVE_START_DATE 
+  GUID                                PVAL007                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  InformationType                     PVAL008                   (null)                 (null)                 String       40        True      For new records PER_ASSIGNMENT_EXTRA_INFO_M    INFORMATION_TYPE 
+  LegislationCode                     PVAL009                   (null)                 (null)                 String       30        False     No              PER_ASSIGNMENT_EXTRA_INFO_M    LEGISLATION_CODE 
+  SourceSystemId                      PVAL010                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL011                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  AssignmentNumber                    PVAL012                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+  Deprecated Attributes 
+  --------------------- 
+  Attributes that are currently accepted but marked as deprecated and will be hidden in a future release. 
+ 
+    Attribute Name 
+    ----------------------------------- 
+    EffectiveLatestChange 
+    EffectiveSequence 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ActionOccurrenceId                  PVAL001                   (null)                 (null)                 Number       18 (null) False     No              PER_ASSIGNMENT_EXTRA_INFO_M    ACTION_OCCURRENCE_ID 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  CreatedBy                           java.lang.String       PER_ASSIGNMENT_EXTRA_INFO_M    CREATED_BY                     ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreationDate                        java.sql.Timestamp     PER_ASSIGNMENT_EXTRA_INFO_M    CREATION_DATE                  ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateDate                      java.sql.Timestamp     PER_ASSIGNMENT_EXTRA_INFO_M    LAST_UPDATE_DATE               ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateLogin                     java.lang.String       PER_ASSIGNMENT_EXTRA_INFO_M    LAST_UPDATE_LOGIN              ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdatedBy                       java.lang.String       PER_ASSIGNMENT_EXTRA_INFO_M    LAST_UPDATED_BY                ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  ObjectVersionNumber                 java.lang.Integer      PER_ASSIGNMENT_EXTRA_INFO_M    OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentExtraInfoId                  DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.view.AssignmentExtraInfoHSDLLOVVO 
+                                           DLoadLOVDisplayAttributes        : [AssignmentExtraInfoId, AssignmentNumber, AeiInformationCategory] 
+                                           DLoadLOVReturnAttributes         : AssignmentExtraInfoId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.AssignmentExtraInfoEFFDEO 
+     Table/View             : PER_ASSIGNMENT_EXTRA_INFO_M 
+     Updateable             : True 
+     Integration Object Name: AssignmentExtraInfo 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_ASSIGNMENT_EXTRA_INFO_M    HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  AssignmentExtraInfoId 
+  EffectiveEndDate 
+  EffectiveStartDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : AssignmentExtraInfoId 
+  Integration Object Name: AssignmentExtraInfo 
+  User Keys 
+    [0] AssignmentNumber, AeiInformationCategory 
+    UK Stage [0] UKVAL001, UKVAL002 
+    [1] AeiInformationCategory, AssignmentId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+    AeiInformationCategory         PER_ASSIGNMENT_EXTRA_INFO_M    AEI_INFORMATION_CATEGORY       Local EO 
+    AssignmentId                   PER_ASSIGNMENT_EXTRA_INFO_M    ASSIGNMENT_ID                  Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : AssignmentId 
+  Integration Object Name: Assignment 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 

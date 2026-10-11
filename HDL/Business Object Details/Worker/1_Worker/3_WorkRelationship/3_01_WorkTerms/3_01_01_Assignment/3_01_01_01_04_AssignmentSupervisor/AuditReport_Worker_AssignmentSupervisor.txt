@@ -1,0 +1,369 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : AssignmentSupervisor 
+Version                 : V2 
+Hierarchy Level         : 5 
+Parent Discriminator    : Assignment 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+  CAT 2 FAIL : SKL-008: AssignmentSupervisorId - The local integration surrogate ID user key extract query could not be created - partial query generated for custom helper. 
+  CAT 1 FAIL : UKL-001: ManagerId - AssignmentSupervisorId - This surrogate key attribute should not be included in the user key. 
+  CAT 2 FAIL : SKF-018: ManagerAssignmentId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Assignment: [Worker,V2,WorkTerms, Worker,V2,Assignment]. 
+  CAT 1 FAIL : UKF-001: ManagerId - ManagerAssignmentId - This surrogate key attribute should not be included in the user key. 
+  CAT 2 FAIL : SKF-018: ManagerId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Person: [Contact,V2,Contact, Worker,V2,Worker]. 
+  CAT 1 FAIL : UKF-001: ManagerAssignmentId - ManagerId - This surrogate key attribute should not be included in the user key. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Assignment Supervisor 
+  UI_DESCRIPTION             : The manager for an assignment. Manager details include the manager type and person number of the manager. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : AssignmentSupervisor 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentSupervisorVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : AssignmentSupervisor 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : AssignmentSupervisor 
+  Parent Object              : Assignment 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : Yes 
+  Adjust Logical End Date    : Yes 
+  User Key DE Override       : Yes 
+  Flexfield support          : NONE 
+ 
+    ** CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AssignmentId                        PVAL001                   PVAL019                PVAL020                Number       18 (null) True      Yes             PER_ASSIGNMENT_SUPERVISORS_F   ASSIGNMENT_ID 
+  AssignmentSupervisorId              PVAL002                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ASSIGNMENT_SUPERVISORS_F   ASSIGNMENT_SUPERVISOR_ID 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_ASSIGNMENT_SUPERVISORS_F   EFFECTIVE_END_DATE 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_ASSIGNMENT_SUPERVISORS_F   EFFECTIVE_START_DATE 
+  ManagerAssignmentId                 PVAL003                   PVAL021                PVAL022                Number       18 (null) True      For new records PER_ASSIGNMENT_SUPERVISORS_F   MANAGER_ASSIGNMENT_ID 
+  ManagerId                           PVAL004                   PVAL023                PVAL024                Number       18 (null) True      For new records PER_ASSIGNMENT_SUPERVISORS_F   MANAGER_ID 
+  ManagerType                         PVAL005                   (null)                 (null)                 String       30        True      For new records PER_ASSIGNMENT_SUPERVISORS_F   MANAGER_TYPE 
+  PersonId                            PVAL006                   PVAL025                PVAL026                Number       18 (null) True      For new records PER_ASSIGNMENT_SUPERVISORS_F   PERSON_ID 
+  PrimaryFlag                         PVAL007                   (null)                 (null)                 String       30        True      For new records PER_ASSIGNMENT_SUPERVISORS_F   PRIMARY_FLAG 
+  AssignmentNumber                    PVAL008                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  ManagerAssignmentNumber             PVAL009                   (null)                 (null)                 String       50        False     No              (null)                         (null) 
+  ManagerPersonNumber                 PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  SourceSystemOwner                   PVAL011                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL012                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL013                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  NewManagerType                      PVAL014                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  NewManagerPersonNumber              PVAL015                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  NewManagerAssignmentNumber          PVAL016                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ActionCode                          PVAL017                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ReasonCode                          PVAL018                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ActionOccurrenceId                  java.lang.Long         PER_ASSIGNMENT_SUPERVISORS_F   ACTION_OCCURRENCE_ID           ___SDO_HIDDEN 
+  ActionOccurrenceIdPopulatedFlag     java.lang.String       PER_ASSIGNMENT_SUPERVISORS_F   (null)                         ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_ASSIGNMENT_SUPERVISORS_F   BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  FreezeStartDate                     java.sql.Date          PER_ASSIGNMENT_SUPERVISORS_F   FREEZE_START_DATE              ___SDO_HIDDEN 
+  FreezeUntilDate                     java.sql.Date          PER_ASSIGNMENT_SUPERVISORS_F   FREEZE_UNTIL_DATE              ___SDO_HIDDEN 
+  IsManagerChange                     java.lang.Boolean      PER_ASSIGNMENT_SUPERVISORS_F   (null)                         ___SDO_HIDDEN 
+  ManagerName                         java.lang.String       PER_ASSIGNMENT_SUPERVISORS_F   (null)                         ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_ASSIGNMENT_SUPERVISORS_F   OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  LoopExists                          java.lang.Boolean      PER_ASSIGNMENT_SUPERVISORS_F   (null)                         ___SDO_HIDDEN 
+  AsgSupervisorDFF                    oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  ManagerTypeVO                       oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHANGE_WORKER_MANAGER_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    AssignmentSupervisorId                 DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentSupervisorVO 
+                                           DLoadLOVDisplayAttributes        : [AssignmentSupervisorId, AssignmentId, ManagerType, ManagerAssignmentId] 
+                                           DLoadLOVReturnAttributes         : AssignmentSupervisorId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHANGE_WORKER_MANAGER_DATA__PER_ALL_ASSIGNMENTS_M__AssignmentSupervisorDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ManagerAssignmentId                    DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_PUBLIC_PERSON_DATA__PER_ASSIGNMENTS_V__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ManagerId                              DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonPVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_PUBLIC_PERSON_DATA__PER_PERSONS__PersonPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonAssignmentsHSDLLOVVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHANGE_WORKER_MANAGER_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.AssignmentSupervisorDEO 
+     Table/View             : PER_ASSIGNMENT_SUPERVISORS_F 
+     Updateable             : True 
+     Integration Object Name: AssignmentSupervisor 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_ASSIGNMENT_SUPERVISORS_F   HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  AssignmentSupervisorId 
+  EffectiveEndDate 
+  EffectiveStartDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : AssignmentSupervisorId 
+  Integration Object Name: AssignmentSupervisor 
+  User Keys 
+    ** CAT 2 FAIL : SKL-008: AssignmentSupervisorId - The local integration surrogate ID user key extract query could not be created - partial query generated 
+                             for custom helper. 
+ 
+    [0] AssignmentNumber, ManagerType, ManagerAssignmentNumber 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003 
+    [1] AssignmentNumber, ManagerType, ManagerPersonNumber(secure) 
+    UK Stage [1] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [2] AssignmentNumber, ManagerType, ManagerId 
+    UK Stage [2] UKVAL001, UKVAL002, UKVAL003 
+    [3] ManagerType, ManagerAssignmentNumber, AssignmentId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [3] UKVAL001, UKVAL002, UKVAL003 
+    [4] ManagerType, ManagerPersonNumber(secure), AssignmentId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [4] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [5] ManagerType, ManagerId, AssignmentId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [5] UKVAL001, UKVAL002, UKVAL003 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+    ManagerType                    PER_ASSIGNMENT_SUPERVISORS_F   MANAGER_TYPE                   Local EO 
+    ManagerAssignmentNumber        PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              DLoadSurrogateColumnMap 
+    ManagerPersonNumber            PER_ALL_PEOPLE_F               PERSON_NUMBER                  DLoadSurrogateColumnMap 
+    ManagerId                      PER_ASSIGNMENT_SUPERVISORS_F   MANAGER_ID                     Local EO 
+      ** CAT 1 FAIL : UKL-001: ManagerId - AssignmentSupervisorId - This surrogate key attribute should not be included in the user key. 
+ 
+    AssignmentId                   PER_ASSIGNMENT_SUPERVISORS_F   ASSIGNMENT_ID                  Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : AssignmentId 
+  Integration Object Name: Assignment 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : ManagerAssignmentId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Assignment 
+    Identified by        : EO association usage + HRC_INTEGRATION_OBJECTS Registry Entry 
+  Referenced Table/View  : PER_ALL_ASSIGNMENTS_M 
+  Referenced Column      : ASSIGNMENT_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKF-018: ManagerAssignmentId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the 
+                             Integration Object Name Assignment: [Worker,V2,WorkTerms, Worker,V2,Assignment]. 
+ 
+    [0] ManagerAssignmentNumber 
+    [1] ManagerPersonNumber 
+    [2] ManagerId 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    ManagerAssignmentNumber 
+    ManagerPersonNumber 
+    ManagerId 
+      ** CAT 1 FAIL : UKF-001: ManagerId - ManagerAssignmentId - This surrogate key attribute should not be included in the user key. 
+ 
+  Attribute Name         : ManagerId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId] + HRC_INTEGRATION_OBJECTS registry entry for table and column 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKF-018: ManagerId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the 
+                             Integration Object Name Person: [Contact,V2,Contact, Worker,V2,Worker]. 
+ 
+    [0] ManagerAssignmentNumber 
+    [1] ManagerPersonNumber 
+    [2] ManagerAssignmentId 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    ManagerAssignmentNumber 
+    ManagerPersonNumber 
+    ManagerAssignmentId 
+      ** CAT 1 FAIL : UKF-001: ManagerAssignmentId - ManagerId - This surrogate key attribute should not be included in the user key. 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId] + HRC_INTEGRATION_OBJECTS registry entry for table and column 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] AssignmentNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    AssignmentNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  ManagerType                    PER_SUPERVISOR_TYPE 
+  NewManagerType                 PER_SUPERVISOR_TYPE 
+ 
+ 

@@ -1,0 +1,229 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : PersonImage 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  None found. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Person Image 
+  UI_DESCRIPTION             : The photo of a person. Also, indicate if it is the primary photo of the person. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : PersonImage 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonImageVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkerImage 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : No ** This object is not certified for HSDL use and won't be available on customer environments. 
+  Security Classification    : No ** The data security classification for this object is unknown so spreadsheets based on this object cannot be shared with 
+                               business users for bulk loading. 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : Image 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ImageId                             PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_IMAGES                     IMAGE_ID 
+  Image                               PVAL002                   (null)                 (null)                 Blob     (null)        True      For new records PER_IMAGES                     IMAGE 
+  ImageName                           PVAL003                   (null)                 (null)                 String      240        True      For new records PER_IMAGES                     IMAGE_NAME 
+  PersonId                            PVAL004                   PVAL011                PVAL012                Number       18 (null) True      Yes             PER_IMAGES                     PERSON_ID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PrimaryFlag                         PVAL006                   (null)                 (null)                 String       30        True      For new records PER_IMAGES                     PRIMARY_FLAG 
+  ImageType                           PVAL007                   (null)                 (null)                 String       30        False     No              PER_IMAGES                     IMAGE_TYPE 
+  SourceSystemOwner                   PVAL008                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL009                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL010                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectVersionNumber                 java.lang.Integer      PER_IMAGES                     OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  Worker                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  ImageDFF                            oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  PersonContact                       oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  Person                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmCommonSharedAM_YesNo             oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+  No LOV detail annotations found. 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.people.core.protectedModel.entity.ImageEO 
+     Table/View             : PER_IMAGES 
+     Updateable             : True 
+     Integration Object Name: Image 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_IMAGES                     HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ImageId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ImageId 
+  Integration Object Name: Image 
+  User Keys 
+    [0] PersonNumber(secure), ImageType, PrimaryFlag 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [1] PersonNumber(secure), ImageName 
+    UK Stage [1] UKVAL_SECURE001, UKVAL_SECURE002 
+    [2] PersonNumber(secure), ImageType 
+    UK Stage [2] UKVAL_SECURE001, UKVAL_SECURE002 
+    [3] ImageName, PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [3] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    ImageType                      PER_IMAGES                     IMAGE_TYPE                     Local EO 
+    PrimaryFlag                    PER_IMAGES                     PRIMARY_FLAG                   Local EO 
+    ImageName                      PER_IMAGES                     IMAGE_NAME                     Local EO 
+    PersonId                       PER_IMAGES                     PERSON_ID                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  PrimaryFlag                    YES_NO 
+ 
+ 

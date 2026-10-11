@@ -1,0 +1,336 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : WorkRelationship 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : UKL-203: LegalEmployerName - PeriodOfServiceId - The local user key table and column combination are not found for security assessment in FND_TABLES, FND_COLUMNS: HR_ALL_ORGANIZATION_UNITS.NAME. 
+  CAT 2 FAIL : SKF-018: LegalEntityId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Work Relationship 
+  UI_DESCRIPTION             : The relationship between the legal employer and the worker that includes the type, start date, and name of the legal employer. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : WorkRelationship 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkRelationshipVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkRelationship 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : COALESCE([PersonId],[PersonNumber]) 
+  ORDER_BY_EXPRESSION        : DECODE(NVL([TerminateWorkRelationshipFlag],'N'),'Y',0 ,1), [DateStart] 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : PeriodOfService 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : DFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  LegalEmployerSeniorityDate          PDATE_SECURE001           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         ADJUSTED_SVC_DATE 
+  ActualTerminationDate               PDATE_SECURE002           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         ACTUAL_TERMINATION_DATE 
+  LegalEntityId                       PVAL001                   PVAL027                PVAL028                Number       18 (null) True      For new records PER_PERIODS_OF_SERVICE         LEGAL_ENTITY_ID 
+  Comments                            PVAL002                   (null)                 (null)                 String     1000        False     No              PER_PERIODS_OF_SERVICE         COMMENTS 
+  EnterpriseSeniorityDate             PDATE_SECURE003           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         ORIGINAL_DATE_OF_HIRE 
+  LastWorkingDate                     PDATE_SECURE004           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         LAST_WORKING_DATE 
+  DateStart                           PDATE_SECURE005           (null)                 (null)                 Date                   True      For new records PER_PERIODS_OF_SERVICE         DATE_START 
+  NotifiedTerminationDate             PDATE_SECURE006           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         NOTIFIED_TERMINATION_DATE 
+  OnMilitaryServiceFlag               PVAL003                   (null)                 (null)                 String       30        True      For new records PER_PERIODS_OF_SERVICE         ON_MILITARY_SERVICE 
+  PeriodOfServiceId                   PVAL004                   (null)                 (null)                 Number       18 (null) True      Yes             PER_PERIODS_OF_SERVICE         PERIOD_OF_SERVICE_ID 
+  PersonId                            PVAL005                   PVAL025                PVAL026                Number       18 (null) True      Yes             PER_PERIODS_OF_SERVICE         PERSON_ID 
+  PrimaryFlag                         PVAL006                   (null)                 (null)                 String       30        True      For new records PER_PERIODS_OF_SERVICE         PRIMARY_FLAG 
+  ProjectedTerminationDate            PDATE_SECURE007           (null)                 (null)                 Date                   False     No              PER_PERIODS_OF_SERVICE         PROJECTED_TERMINATION_DATE 
+  RehireAuthorizerPersonId            PVAL007                   PVAL029                PVAL030                Number       18 (null) False     No              PER_PERIODS_OF_SERVICE         REHIRE_AUTHORIZER_PERSON_ID 
+  RehireAuthorizor                    PVAL_SECURE001            (null)                 (null)                 String       30        False     No              PER_PERIODS_OF_SERVICE         REHIRE_AUTHORIZOR 
+  RehireReason                        PVAL_SECURE002            (null)                 (null)                 String       60        False     No              PER_PERIODS_OF_SERVICE         REHIRE_REASON 
+  RevokeUserAccess                    PVAL008                   (null)                 (null)                 String       30        False     No              PER_PERIODS_OF_SERVICE         REVOKE_USER_ACCESS 
+  WorkerNumber                        PVAL009                   (null)                 (null)                 String       30        False     No              PER_PERIODS_OF_SERVICE         WORKER_NUMBER 
+  WorkerComments                      PVAL010                   (null)                 (null)                 String     1000        False     No              PER_PERIODS_OF_SERVICE         WORKER_COMMENTS 
+  PersonNumber                        PVAL_SECURE004            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LegalEmployerName                   PVAL012                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  RehireRecommendationFlag            PVAL_SECURE003            (null)                 (null)                 String       30        True      For new records PER_PERIODS_OF_SERVICE         REHIRE_RECOMMENDATION 
+  WorkerType                          PVAL013                   (null)                 (null)                 String       30        True      For new records PER_PERIODS_OF_SERVICE         PERIOD_TYPE 
+  GUID                                PVAL014                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL015                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL016                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  ActionCode                          PVAL017                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ReasonCode                          PVAL018                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  NewStartDate                        PDATE001                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  DateOfDeath                         PDATE002                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  HideUntilDate                       PDATE003                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  DateForPrimaryFlagChange            PDATE004                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  CancelWorkRelationshipFlag          PVAL019                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  TerminateWorkRelationshipFlag       PVAL020                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ReverseTerminationFlag              PVAL021                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  CorrectTerminationFlag              PVAL022                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  GlobalTransferFlag                  PVAL023                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ReadyToConvert                      PVAL024                   (null)                 (null)                 String       10        False     No              PER_PERIODS_OF_SERVICE         READY_TO_CONVERT 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  LegislationCode                     java.lang.String       PER_PERIODS_OF_SERVICE         LEGISLATION_CODE               ___SDO_HIDDEN 
+  AcceptedTerminationDate             java.sql.Date          PER_PERIODS_OF_SERVICE         ACCEPTED_TERMINATION_DATE      ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_PERIODS_OF_SERVICE         BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  DateEmployeeDataVerified            java.sql.Date          PER_PERIODS_OF_SERVICE         DATE_EMPLOYEE_DATA_VERIFIED    ___SDO_HIDDEN 
+  ActionOccurrenceId                  java.lang.Long         PER_PERIODS_OF_SERVICE         ACTION_OCCURRENCE_ID           ___SDO_HIDDEN 
+  FastPathEmployee                    java.lang.String       PER_PERIODS_OF_SERVICE         FAST_PATH_EMPLOYEE             ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_PERIODS_OF_SERVICE         OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  TerminationAcceptedPersonId         java.lang.Long         PER_PERIODS_OF_SERVICE         TERMINATION_ACCEPTED_PERSON_ID ___SDO_HIDDEN 
+  OriginalDateOfHire                  java.sql.Date          PER_PERIODS_OF_SERVICE         ORIGINAL_DATE_OF_HIRE          ___SDO_HIDDEN 
+  PeriodType                          java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  CandidateNumber                     java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  WorkTerms                           oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkRelationshipDFF                 oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkRelationshipDDF                 oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmCommonSharedAM_PerPeriodTypeLookup oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  HcmLookupPVO_Per_Revoke_User_Access oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  ReadyToConvertVA                    oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  SeniorityProfileVO1                 oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  EmploymentConfigurationsSDPVO1      oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  RehireRecYesNoVA                    oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    LegalEntityId                          DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.LegalEmployerLOVPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_LEGAL_EMPLOYER_DATA__HR_ALL_ORGANIZATION_UNITS_F__OrganizationUnitBasePEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PeriodOfServiceId                      DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkRelationshipVO 
+                                           DLoadLOVDisplayAttributes        : [PeriodOfServiceId, PersonId, DateStart, WorkerType, LegalEntityId] 
+                                           DLoadLOVReturnAttributes         : PeriodOfServiceId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORK_RELATIONSHIP_DATA__PER_PERIODS_OF_SERVICE__PeriodOfServiceEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.helper.PersonKeyHelperNDEVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORK_RELATIONSHIP_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    RehireAuthorizerPersonId               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonPVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_PUBLIC_PERSON_DATA__PER_PERSONS__PersonPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.PeriodOfServiceEO 
+     Table/View             : PER_PERIODS_OF_SERVICE 
+     Updateable             : True 
+     Integration Object Name: PeriodOfService 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_PERIODS_OF_SERVICE         HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  PeriodOfServiceId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : PeriodOfServiceId 
+  Integration Object Name: PeriodOfService 
+  User Keys 
+    [0] PersonNumber(secure), DateStart(secure), WorkerType, LegalEmployerName 
+    UK Stage [0] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [1] DateStart(secure), WorkerType, LegalEmployerName, PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKDATE_SECURE001, UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    DateStart                      PER_PERIODS_OF_SERVICE         DATE_START                     Local EO 
+    WorkerType                     PER_PERIODS_OF_SERVICE         PERIOD_TYPE                    Local EO 
+    LegalEmployerName              HR_ALL_ORGANIZATION_UNITS      NAME                           DLoadAttributeTableAndColumn 
+      ** CAT 2 FAIL : UKL-203: LegalEmployerName - PeriodOfServiceId - The local user key table and column combination are not found for security assessment in 
+                               FND_TABLES, FND_COLUMNS: HR_ALL_ORGANIZATION_UNITS.NAME. 
+ 
+    PersonId                       PER_PERIODS_OF_SERVICE         PERSON_ID                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : LegalEntityId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Organization 
+    Identified by        : EO association usage + HRC_INTEGRATION_OBJECTS Registry Entry 
+  Referenced Table/View  : HR_ALL_ORGANIZATION_UNITS_F_VL 
+  Referenced Column      : ORGANIZATION_ID 
+  User Keys 
+    ** CAT 2 FAIL : SKF-018: LegalEntityId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the 
+                             Integration Object Name Organization: [Organization,V2,Organization]. 
+ 
+    [0] LegalEmployerName 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    LegalEmployerName 
+ 
+  Attribute Name         : RehireAuthorizerPersonId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : Resolver VO + Referenced EO has IntegrationObjectName 
+  Referenced Table/View  : PER_ALL_PEOPLE_F 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] RehireAuthorizor 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    RehireAuthorizor 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  ReadyToConvert                 YES_NO 
+  RehireRecommendationFlag       ORA_PER_YES_NO_NOT_SPECIFIED 
+  RevokeUserAccess               PER_REVOKE_USER_ACCESS 
+  WorkerType                     PER_PERIOD_TYPE 
+ 
+ 

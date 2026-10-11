@@ -1,0 +1,253 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : WorkerExtraInfo 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  None found. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Worker Extra Information 
+  UI_DESCRIPTION             : The extra information captured about the person using the configurable structure of the Person extensible flexfield. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : WorkerExtraInfo 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.people.core.flex.personExtraInfoEFF.view.PersonExtraInformationContextVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkerExtraInformationContextVO 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : PersonExtraInfo 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : EFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  PersonExtraInfoId                   PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_PEOPLE_EXTRA_INFO_F        PERSON_EXTRA_INFO_ID 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_PEOPLE_EXTRA_INFO_F        EFFECTIVE_START_DATE 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_PEOPLE_EXTRA_INFO_F        EFFECTIVE_END_DATE 
+  PersonId                            PVAL002                   PVAL010                PVAL011                Number       18 (null) True      Yes             PER_PEOPLE_EXTRA_INFO_F        PERSON_ID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  InformationType                     PVAL004                   (null)                 (null)                 String       40        True      For new records PER_PEOPLE_EXTRA_INFO_F        INFORMATION_TYPE 
+  PeiInformationCategory              PVAL005                   (null)                 (null)                 String       30        False     No              PER_PEOPLE_EXTRA_INFO_F        PEI_INFORMATION_CATEGORY 
+  SourceSystemOwner                   PVAL006                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL007                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL008                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  CategoryCode                        PVAL009                   (null)                 (null)                 String       80        True      For new records PER_PEOPLE_EXTRA_INFO_F        CATEGORY_CODE 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  ObjectVersionNumber                 java.lang.Integer      PER_PEOPLE_EXTRA_INFO_F        OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  CreatedBy                           java.lang.String       PER_PEOPLE_EXTRA_INFO_F        CREATED_BY                     ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreationDate                        java.sql.Timestamp     PER_PEOPLE_EXTRA_INFO_F        CREATION_DATE                  ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateDate                      java.sql.Timestamp     PER_PEOPLE_EXTRA_INFO_F        LAST_UPDATE_DATE               ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateLogin                     java.lang.String       PER_PEOPLE_EXTRA_INFO_F        LAST_UPDATE_LOGIN              ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdatedBy                       java.lang.String       PER_PEOPLE_EXTRA_INFO_F        LAST_UPDATED_BY                ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  BusinessProcess                     java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  ContextName                         java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  ReloadTransactionId                 java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  SubModuleIdentifier                 java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  SkipTransactionsData                java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    PersonExtraInfoId                      DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.people.core.protectedModel.common.view.PersonExtraInfoNonDEVO 
+                                           DLoadLOVDisplayAttributes        : [PersonId,PeiInformationCategory] 
+                                           DLoadLOVReturnAttributes         : PersonExtraInfoId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDCUSTOMVC__PER_MANAGE_PERSON_EXTRA_INFO_DATA__PER_ALL_PEOPLE_F__PersonExtraInfoDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.people.core.protectedModel.common.view.PersonDetailsVO 
+                                           DLoadLOVDisplayAttributes        : [PersonNumber] 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_EXTRA_INFO_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.people.core.protectedModel.entity.PersonExtraInfoDEO 
+     Table/View             : PER_PEOPLE_EXTRA_INFO_F 
+     Updateable             : True 
+     Integration Object Name: PersonExtraInfo 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_PEOPLE_EXTRA_INFO_F        HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  PersonExtraInfoId 
+  EffectiveStartDate 
+  EffectiveEndDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : PersonExtraInfoId 
+  Integration Object Name: PersonExtraInfo 
+  User Keys 
+    [0] PeiInformationCategory, PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002 
+    [1] PeiInformationCategory, PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PeiInformationCategory         PER_PEOPLE_EXTRA_INFO_F        PEI_INFORMATION_CATEGORY       Local EO 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    PersonId                       PER_PEOPLE_EXTRA_INFO_F        PERSON_ID                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 

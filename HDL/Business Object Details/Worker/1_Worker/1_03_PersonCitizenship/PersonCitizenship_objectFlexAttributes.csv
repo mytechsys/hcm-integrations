@@ -1,0 +1,3 @@
+Name,METADATA Attribute,Required,Value Set Code,Category,Context,Description,Data Type,Length,Context Code
+"Main Citizenship","mainCitizenship(PER_CITIZENSHIPS_DFF=Spain Citizenship Info)","No","Yes or No ","","Spain Citizenship Info","Main Citizenship","String","5","Spain Citizenship Info"
+"Flexfield Context","FLEX:PER_CITIZENSHIPS_DFF","Yes","","","Spain Citizenship Info","Supply the code of the flexfield context.","String","","Spain Citizenship Info"

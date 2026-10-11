@@ -1,0 +1,500 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : SeniorityDate 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 3 FAIL : OBJ-204: BusinessUnitId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this rejected attribute. 
+  CAT 2 FAIL : SKL-008: SeniorityDateId - The local integration surrogate ID user key extract query could not be created - all indexes - missing annotations detected for custom helper - [DLoadTableList_0, DLoadUserKeyColumnMap_0, DLoadDefaultWhereClause_0, DLoadSurrogateColumnMap_0, DLoadTableList_1, DLoadUserKeyColumnMap_1, DLoadDefaultWhereClause_1, DLoadSurrogateColumnMap_1, DLoadTablTRUNCATED 
+  CAT 2 FAIL : UKL-205: JobCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: JobCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: GradeCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: GradeCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: CollectiveAgreementCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: CollectiveAgreementCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: BargainingUnitCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: BargainingUnitCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: AssignmentCategory - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: AssignmentCategory - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: GradeStepName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: GradeStepName - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: PositionCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: PositionCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-103: LegislationCode - SeniorityDateId - The user key attribute has its own KeyHelper suggesting this is not the end point. 
+  CAT 2 FAIL : UKL-205: LegislationCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: LegislationCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: LegalEmployerName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: LegalEmployerName - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: UnionName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: UnionName - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: DepartmentName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: DepartmentName - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: LocationCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: LocationCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : UKL-205: BusinessUnitShortCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient component. 
+  CAT 2 FAIL : UKL-106: BusinessUnitShortCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+  CAT 2 FAIL : SKF-018: DepartmentId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 2 FAIL : SKF-018: UnionId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Seniority Date 
+  UI_DESCRIPTION             : The dates on which the calculation of a worker's length of service with an entity is based. These entities could be Enterprise, 
+                               Legal Employer, Country, Department, Grade, Grade Step, Job, Location, Position, Union, Bargaining Unit and Collective Agreement. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : SeniorityDate 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : ORA_UPDATE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.SeniorityDateVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : SeniorityDate 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : SeniorityDate 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  SeniorityDateId                     PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_SENIORITY_DATES_F          SENIORITY_DATE_ID 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_SENIORITY_DATES_F          EFFECTIVE_START_DATE 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_SENIORITY_DATES_F          EFFECTIVE_END_DATE 
+  SeniorityDateCode                   PVAL002                   (null)                 (null)                 String       30        True      For new records PER_SENIORITY_DATES_F          SENIORITY_DATE_CODE 
+  PersonId                            PVAL003                   PVAL038                PVAL039                Number       18 (null) True      Yes             PER_SENIORITY_DATES_F          PERSON_ID 
+  EntryDate                           PDATE001                  (null)                 (null)                 Date                   True      For new records PER_SENIORITY_DATES_F          ENTRY_DATE 
+  SeniorityDate                       PDATE002                  (null)                 (null)                 Date                   True      For new records PER_SENIORITY_DATES_F          SENIORITY_DATE 
+  ManualAdjustmentDays                PVAL004                   (null)                 (null)                 Number       18      5 False     No              PER_SENIORITY_DATES_F          MANUAL_ADJUSTMENT_DAYS 
+  ManualAdjustmentHours               PVAL005                   (null)                 (null)                 Number       18      5 False     No              PER_SENIORITY_DATES_F          MANUAL_ADJUSTMENT_HOURS 
+  ManualAdjustmentComments            PVAL006                   (null)                 (null)                 String      300        False     No              PER_SENIORITY_DATES_F          MANUAL_ADJUSTMENT_COMMENTS 
+  SeniorityHours                      PVAL007                   (null)                 (null)                 Number       18      5 False     No              PER_SENIORITY_DATES_F          SENIORITY_HOURS 
+  SourceSystemOwner                   PVAL008                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL009                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL010                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  AssignmentNumber                    PVAL012                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  AssignmentId                        PVAL013                   PVAL040                PVAL041                Number       18 (null) False     No              (null)                         (null) 
+  LegalEmployerName                   PVAL014                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  DateStart                           PDATE003                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  WorkerType                          PVAL015                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LegalEntityId                       PVAL016                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  PeriodOfServiceId                   PVAL017                   PVAL042                PVAL043                Number       18 (null) False     No              (null)                         (null) 
+  BusinessUnitShortCode               PVAL018                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  CollectiveAgreementCode             PVAL019                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  CollectiveAgreementId               PVAL020                   PVAL044                PVAL045                Number       18 (null) False     No              (null)                         (null) 
+  BargainingUnitCode                  PVAL021                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  GradeCode                           PVAL022                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  GradeId                             PVAL023                   PVAL046                PVAL047                Number       18 (null) False     No              (null)                         (null) 
+  JobCode                             PVAL024                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  JobId                               PVAL025                   PVAL048                PVAL049                Number       18 (null) False     No              (null)                         (null) 
+  PositionCode                        PVAL026                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  PositionId                          PVAL027                   PVAL050                PVAL051                Number       18 (null) False     No              (null)                         (null) 
+  LegislationCode                     PVAL028                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UnionName                           PVAL029                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UnionId                             PVAL030                   PVAL052                PVAL053                Number       18 (null) False     No              (null)                         (null) 
+  DepartmentName                      PVAL031                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  DepartmentId                        PVAL032                   PVAL058                PVAL059                Number       18 (null) False     No              (null)                         (null) 
+  LocationCode                        PVAL033                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  LocationId                          PVAL034                   PVAL054                PVAL055                Number       18 (null) False     No              (null)                         (null) 
+  GradeStepName                       PVAL035                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  GradeStepId                         PVAL036                   PVAL056                PVAL057                Number       18 (null) False     No              (null)                         (null) 
+  AssignmentCategory                  PVAL037                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+  Deprecated Attributes 
+  --------------------- 
+  Attributes that are currently accepted but marked as deprecated and will be hidden in a future release. 
+ 
+    Attribute Name 
+    ----------------------------------- 
+    SeniorityDate 
+    SeniorityHours 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  BaseSeniorityDate                   java.sql.Date          PER_SENIORITY_DATES_F          BASE_SENIORITY_DATE            ___SDO_HIDDEN 
+  CalculationType                     java.lang.String       PER_SENIORITY_DATES_F          CALCULATION_TYPE               ___SDO_HIDDEN 
+  LevelCode                           java.lang.String       PER_SENIORITY_DATES_F          LEVEL_CODE                     ___SDO_HIDDEN 
+  LevelObjectId                       java.lang.Long         PER_SENIORITY_DATES_F          LEVEL_OBJECT_ID                ___SDO_HIDDEN 
+  SeniorityField                      java.lang.String       PER_SENIORITY_DATES_F          SENIORITY_FIELD                ___SDO_HIDDEN 
+  SeniorityFieldValue                 java.lang.String       PER_SENIORITY_DATES_F          SENIORITY_FIELD_KEY            ___SDO_HIDDEN 
+  RecordCreator                       java.lang.String       PER_SENIORITY_DATES_F          RECORD_CREATOR                 ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_SENIORITY_DATES_F          BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  TotalManualAdjustmentDays           java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_MANUAL_ADJUSTMENT_DAYS   ___SDO_HIDDEN 
+  AutoAdjustmentDays                  java.math.BigDecimal   PER_SENIORITY_DATES_F          AUTO_ADJUSTMENT_DAYS           ___SDO_HIDDEN 
+  TotalAutoAdjustmentDays             java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_AUTO_ADJUSTMENT_DAYS     ___SDO_HIDDEN 
+  TotalAdjustmentDays                 java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_ADJUSTMENT_DAYS          ___SDO_HIDDEN 
+  TotalManualAdjustmentHours          java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_MANUAL_ADJUSTMENT_HOURS  ___SDO_HIDDEN 
+  AutoAdjustmentHours                 java.math.BigDecimal   PER_SENIORITY_DATES_F          AUTO_ADJUSTMENT_HOURS          ___SDO_HIDDEN 
+  TotalAutoAdjustmentHours            java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_AUTO_ADJUSTMENT_HOURS    ___SDO_HIDDEN 
+  TotalAdjustmentHours                java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_ADJUSTMENT_HOURS         ___SDO_HIDDEN 
+  AutoAdjustmentComments              java.lang.String       PER_SENIORITY_DATES_F          AUTO_ADJUSTMENT_COMMENTS       ___SDO_HIDDEN 
+  GapInDays                           java.math.BigDecimal   PER_SENIORITY_DATES_F          GAP_IN_DAYS                    ___SDO_HIDDEN 
+  ExitDate                            java.sql.Date          PER_SENIORITY_DATES_F          EXIT_DATE                      ___SDO_HIDDEN 
+  TotalSeniorityHours                 java.math.BigDecimal   PER_SENIORITY_DATES_F          TOTAL_SENIORITY_HOURS          ___SDO_HIDDEN 
+  LastSeniorityHrsRunDate             java.sql.Date          PER_SENIORITY_DATES_F          LAST_SENIORITY_HRS_RUN_DATE    ___SDO_HIDDEN 
+  SeniorityHoursLos                   java.lang.String       PER_SENIORITY_DATES_F          SENIORITY_HOURS_LOS            ___SDO_HIDDEN 
+  OverlappingPeriodInDays             java.math.BigDecimal   PER_SENIORITY_DATES_F          OVERLAPPING_PERIOD_IN_DAYS     ___SDO_HIDDEN 
+  MarkedForRecalculation              java.lang.String       PER_SENIORITY_DATES_F          MARKED_FOR_RECALCULATION       ___SDO_HIDDEN 
+  SeniorityFieldId                    java.lang.Long         PER_SENIORITY_DATES_F          SENIORITY_FIELD_NUMBER         ___SDO_HIDDEN 
+  SeniorityFieldDate                  java.sql.Date          PER_SENIORITY_DATES_F          SENIORITY_FIELD_DATE           ___SDO_HIDDEN 
+  SeniorityFieldText                  java.lang.String       PER_SENIORITY_DATES_F          SENIORITY_FIELD_TEXT           ___SDO_HIDDEN 
+  ActionOccurrenceId                  java.lang.Long         PER_SENIORITY_DATES_F          ACTION_OCCURRENCE_ID           ___SDO_HIDDEN 
+  PreviousSeniorityDateId             java.lang.Long         PER_SENIORITY_DATES_F          PREVIOUS_SENIORITY_DATE_ID     ___SDO_HIDDEN 
+  CreatedBy                           java.lang.String       PER_SENIORITY_DATES_F          CREATED_BY                     ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreationDate                        java.sql.Timestamp     PER_SENIORITY_DATES_F          CREATION_DATE                  ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdatedBy                       java.lang.String       PER_SENIORITY_DATES_F          LAST_UPDATED_BY                ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateDate                      java.sql.Timestamp     PER_SENIORITY_DATES_F          LAST_UPDATE_DATE               ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateLogin                     java.lang.String       PER_SENIORITY_DATES_F          LAST_UPDATE_LOGIN              ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  ObjectVersionNumber                 java.lang.Integer      PER_SENIORITY_DATES_F          OBJECT_VERSION_NUMBER          ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  SysEffectiveDate                    java.sql.Date          PER_SENIORITY_DATES_F          (null)                         ___SDO_HIDDEN___in_EO_ATTR_TRANSIENT_list 
+  BusinessUnitId                      java.lang.String       (null)                         (null)                         ___READONLY 
+  GradeSetId                          java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  JobSetId                            java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  LocationSetId                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  SeniorityLosTotalDays               java.math.BigDecimal   PER_SENIORITY_DATES_F          SENIORITY_LOS_TOTAL_DAYS       ___SDO_HIDDEN 
+  Worker                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  AssignmentROVOVA                    oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  SeniorityDatesSetupVOVA             oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_SENIORITY_DATES_DATA__PER_ALL_PEOPLE_F__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    BusinessUnitId                         DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.financials.commonModules.businessUnits.publicView.BusinessUnitPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : BusinessUnitId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 3 FAIL : OBJ-204: BusinessUnitId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this 
+                               rejected attribute. 
+ 
+    DepartmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.DepartmentPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    GradeId                                DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.grades.publicView.GradePVO 
+                                           DLoadLOVDisplayAttributes        : GradeCode 
+                                           DLoadLOVReturnAttributes         : GradeId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    JobId                                  DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.jobs.publicView.JobPVO 
+                                           DLoadLOVDisplayAttributes        : JobCode 
+                                           DLoadLOVReturnAttributes         : JobId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    LegalEntityId                          DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.LegalEmployerLOVPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    LocationId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.locations.publicView.LocationLovPVO 
+                                           DLoadLOVDisplayAttributes        : LocationCode 
+                                           DLoadLOVReturnAttributes         : LocationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PeriodOfServiceId                      DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkRelationshipVO 
+                                           DLoadLOVDisplayAttributes        : [PeriodOfServiceId, PersonId, DateStart, WorkerType, LegalEntityId] 
+                                           DLoadLOVReturnAttributes         : PeriodOfServiceId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_SENIORITY_DATES_DATA__PER_ALL_PEOPLE_F__PeriodOfServiceEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.helper.PersonKeyHelperNDEVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_SENIORITY_DATES_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PositionId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.positions.publicView.PositionPVO 
+                                           DLoadLOVDisplayAttributes        : PositionCode 
+                                           DLoadLOVReturnAttributes         : PositionId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    SeniorityDateId                        DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.SeniorityDateVO 
+                                           DLoadLOVDisplayAttributes        : [SeniorityDateId, SeniorityDateCode, EntryDate, PersonId, LevelObjectId, SeniorityFieldValue] 
+                                           DLoadLOVReturnAttributes         : SeniorityDateId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_SENIORITY_DATES_DATA__PER_ALL_PEOPLE_F__SeniorityDateDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.SeniorityDateDEO 
+     Table/View             : PER_SENIORITY_DATES_F 
+     Updateable             : True 
+     Integration Object Name: SeniorityDate 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_SENIORITY_DATES_F          HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  SeniorityDateId 
+  EffectiveStartDate 
+  EffectiveEndDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : SeniorityDateId 
+  Integration Object Name: SeniorityDate 
+  User Keys 
+    ** CAT 2 FAIL : SKL-008: SeniorityDateId - The local integration surrogate ID user key extract query could not be created - all indexes - missing 
+                             annotations detected for custom helper - [DLoadTableList_0, DLoadUserKeyColumnMap_0, DLoadDefaultWhereClause_0, 
+                             DLoadSurrogateColumnMap_0, DLoadTableList_1, DLoadUserKeyColumnMap_1, DLoadDefaultWhereClause_1, DLoadSurrogateColumnMap_1, 
+                             DLoadTableList_2, DLoadUserKeyColumnMap_2, DLoadDefaultWhereClause_2, DLoadSurrogateColumnMap_2, DLoadTableList_3, 
+                             DLoadUserKeyColumnMap_3, DLoadDefaultWhereClause_3, DLoadSurrogateColumnMap_3, DLoadTableList_4, DLoadUserKeyColumnMap_4, 
+                             DLoadDefaultWhereClause_4, DLoadSurrogateColumnMap_4, DLoadTableList_5, DLoadUserKeyColumnMap_5, DLoadDefaultWhereClause_5, 
+                             DLoadSurrogateColumnMap_5, DLoadTableList_6, DLoadUserKeyColumnMap_6, DLoadDefaultWhereClause_6, DLoadSurrogateColumnMap_6, 
+                             DLoadTableList_7, DLoadUserKeyColumnMap_7, DLoadDefaultWhereClause_7, DLoadSurrogateColumnMap_7, DLoadTableList_8, 
+                             DLoadUserKeyColumnMap_8, DLoadDefaultWhereClause_8, DLoadSurrogateColumnMap_8, DLoadTableList_9, DLoadUserKeyColumnMap_9, 
+                             DLoadDefaultWhereClause_9, DLoadSurrogateColumnMap_9, DLoadTableList_10, DLoadUserKeyColumnMap_10, DLoadDefaultWhereClause_10, 
+                             DLoadSurrogateColumnMap_10, DLoadTableList_11, DLoadUserKeyColumnMap_11, DLoadDefaultWhereClause_11, DLoadSurrogateColumnMap_11, 
+                             DLoadTableList_12, DLoadUserKeyColumnMap_12, DLoadDefaultWhereClause_12, DLoadSurrogateColumnMap_12, DLoadTableList_13, 
+                             DLoadUserKeyColumnMap_13, DLoadDefaultWhereClause_13, DLoadSurrogateColumnMap_13]. 
+ 
+    [0] SeniorityDateCode, EntryDate, PersonNumber(secure), JobCode 
+    UK Stage [0] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [1] SeniorityDateCode, EntryDate, PersonNumber(secure), GradeCode 
+    UK Stage [1] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [2] SeniorityDateCode, EntryDate, PersonNumber(secure), CollectiveAgreementCode 
+    UK Stage [2] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [3] SeniorityDateCode, EntryDate, PersonNumber(secure), BargainingUnitCode 
+    UK Stage [3] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [4] SeniorityDateCode, EntryDate, PersonNumber(secure), AssignmentCategory 
+    UK Stage [4] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [5] SeniorityDateCode, EntryDate, PersonNumber(secure), GradeStepName 
+    UK Stage [5] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [6] SeniorityDateCode, EntryDate, PersonNumber(secure), PositionCode 
+    UK Stage [6] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [7] SeniorityDateCode, EntryDate, PersonNumber(secure), LegislationCode 
+    UK Stage [7] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [8] SeniorityDateCode, EntryDate, PersonNumber(secure), LegalEmployerName 
+    UK Stage [8] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [9] SeniorityDateCode, EntryDate, PersonNumber(secure), UnionName 
+    UK Stage [9] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [10] SeniorityDateCode, EntryDate, PersonNumber(secure), DepartmentName 
+    UK Stage [10] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [11] SeniorityDateCode, EntryDate, PersonNumber(secure), LocationCode 
+    UK Stage [11] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [12] SeniorityDateCode, EntryDate, PersonNumber(secure), BusinessUnitShortCode 
+    UK Stage [12] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [13] SeniorityDateCode, EntryDate, PersonNumber(secure) 
+    UK Stage [13] UKVAL_SECURE001, UKDATE_SECURE001, UKVAL_SECURE002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    SeniorityDateCode              PER_SENIORITY_DATES_F          SENIORITY_DATE_CODE            Local EO 
+    EntryDate                      PER_SENIORITY_DATES_F          ENTRY_DATE                     Local EO 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    JobCode                        (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: JobCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient 
+                               component. 
+      ** CAT 2 FAIL : UKL-106: JobCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    GradeCode                      (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: GradeCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient 
+                               component. 
+      ** CAT 2 FAIL : UKL-106: GradeCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    CollectiveAgreementCode        (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: CollectiveAgreementCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: CollectiveAgreementCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    BargainingUnitCode             (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: BargainingUnitCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: BargainingUnitCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    AssignmentCategory             (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: AssignmentCategory - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: AssignmentCategory - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    GradeStepName                  (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: GradeStepName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: GradeStepName - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    PositionCode                   (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: PositionCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: PositionCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    LegislationCode                (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-103: LegislationCode - SeniorityDateId - The user key attribute has its own KeyHelper suggesting this is not the end point. 
+      ** CAT 2 FAIL : UKL-205: LegislationCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: LegislationCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    LegalEmployerName              (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: LegalEmployerName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: LegalEmployerName - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    UnionName                      (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: UnionName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - non-transient 
+                               component. 
+      ** CAT 2 FAIL : UKL-106: UnionName - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    DepartmentName                 (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: DepartmentName - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: DepartmentName - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    LocationCode                   (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: LocationCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: LocationCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+    BusinessUnitShortCode          (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: BusinessUnitShortCode - SeniorityDateId - The source table and column for the local user key attribute cannot be identified - 
+                               non-transient component. 
+      ** CAT 2 FAIL : UKL-106: BusinessUnitShortCode - SeniorityDateId - No resolver VO found for the user key attribute. 
+ 
+ 
+Parent Surrogate ID Analysis 

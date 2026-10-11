@@ -1,0 +1,297 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : AssignmentEligibleJob 
+Version                 : V2 
+Hierarchy Level         : 5 
+Parent Discriminator    : Assignment 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 3 FAIL : OBJ-204: BusinessUnitId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, DLoadLOVListSecurityViewCriteria] property from this rejected attribute. 
+  CAT 2 FAIL : SKL-008: AsgElgJobId - The local integration surrogate ID user key extract query could not be created - single index. 
+  CAT 2 FAIL : UKL-203: BusinessUnitShortCode - AsgElgJobId - The local user key table and column combination are not found for security assessment in FND_TABLES, FND_COLUMNS: FUN_ALL_BUSINESS_UNITS_V.SHORT_CODE. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Assignment Eligible Job 
+  UI_DESCRIPTION             : An additional job that a worker is eligible to work for. You can record additional jobs as eligible jobs. This feature can be 
+                               used in scenarios where a person is required to report time for additional jobs. The feature can also be used where a person is 
+                               working on more than one job, and the additional jobs need to be stored in the application for tracking purpose. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : AssignmentEligibleJob 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentEligibleJobsVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : AssignmentEligibleJobs 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : AssignmentEligibleJob 
+  Parent Object              : Assignment 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AsgElgJobId                         PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ASG_ELIGIBLE_JOBS          ASG_ELG_JOB_ID 
+  AssignmentId                        PVAL002                   PVAL013                PVAL014                Number       18 (null) True      Yes             PER_ASG_ELIGIBLE_JOBS          ASSIGNMENT_ID 
+  JobId                               PVAL003                   PVAL015                PVAL016                Number       18 (null) True      For new records PER_ASG_ELIGIBLE_JOBS          JOB_ID 
+  ReliefType                          PVAL004                   (null)                 (null)                 String       30        True      For new records PER_ASG_ELIGIBLE_JOBS          OVERRIDE_FLAG 
+  FromDate                            PDATE001                  (null)                 (null)                 Date                   True      For new records PER_ASG_ELIGIBLE_JOBS          FROM_DATE 
+  ToDate                              PDATE002                  (null)                 (null)                 Date                   True      No              PER_ASG_ELIGIBLE_JOBS          TO_DATE 
+  Frequency                           PVAL005                   (null)                 (null)                 String       30        False     No              PER_ASG_ELIGIBLE_JOBS          FREQUENCY 
+  ManualRate                          PVAL006                   (null)                 (null)                 Number       30     10 False     No              PER_ASG_ELIGIBLE_JOBS          RATE 
+  SourceSystemId                      PVAL007                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL008                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  GUID                                PVAL009                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  AssignmentNumber                    PVAL010                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  JobCode                             PVAL011                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  BusinessUnitShortCode               PVAL012                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    ToDate                              True      No              DLoadAttrsNotRequired property. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ObjectVersionNumber                 java.lang.Integer      PER_ASG_ELIGIBLE_JOBS          OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  RateDefinitionId                    java.lang.Long         PER_ASG_ELIGIBLE_JOBS          RATE_DEFINITION_ID             ___SDO_HIDDEN 
+  Currency                            java.lang.String       PER_ASG_ELIGIBLE_JOBS          CURRENCY                       ___SDO_HIDDEN 
+  LastUpdatedBy                       java.lang.String       PER_ASG_ELIGIBLE_JOBS          LAST_UPDATED_BY                ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateLogin                     java.lang.String       PER_ASG_ELIGIBLE_JOBS          LAST_UPDATE_LOGIN              ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateDate                      java.sql.Timestamp     PER_ASG_ELIGIBLE_JOBS          LAST_UPDATE_DATE               ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreatedBy                           java.lang.String       PER_ASG_ELIGIBLE_JOBS          CREATED_BY                     ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreationDate                        java.sql.Timestamp     PER_ASG_ELIGIBLE_JOBS          CREATION_DATE                  ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  BusinessUnitId                      java.lang.Long         PER_ASG_ELIGIBLE_JOBS          BUSINESS_UNIT_ID               ___SDO_HIDDEN 
+  JobSetId                            java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  PersonId                            java.lang.Long         PER_ASG_ELIGIBLE_JOBS          PERSON_ID                      ___SDO_HIDDEN 
+  Assignment                          oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  PerReliefTypeLookup                 oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  PerFrequencyLookup                  oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AsgElgJobId                            DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentEligibleJobsVO 
+                                           DLoadLOVDisplayAttributes        : [AsgElgJobId, AssignmentId, JobId, FromDate] 
+                                           DLoadLOVReturnAttributes         : AsgElgJobId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_ELIGIBLE_JOBS_DATA__PER_ALL_ASSIGNMENTS_M__AssignmentEligibleJobsEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_ELIGIBLE_JOBS_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    BusinessUnitId                         DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.financials.commonModules.businessUnits.publicView.BusinessUnitPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : BusinessUnitId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_BUSINESS_UNIT_ORGANIZATION_DATA__HR_ALL_ORGANIZATION_UNITS_F__BusinessUnitPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 3 FAIL : OBJ-204: BusinessUnitId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes, 
+                               DLoadLOVListSecurityViewCriteria] property from this rejected attribute. 
+ 
+    JobId                                  DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.jobs.publicView.JobPVO 
+                                           DLoadLOVDisplayAttributes        : JobCode 
+                                           DLoadLOVReturnAttributes         : JobId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.AssignmentEligibleJobsEO 
+     Table/View             : PER_ASG_ELIGIBLE_JOBS 
+     Updateable             : True 
+     Integration Object Name: AssignmentEligibleJob 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_ASG_ELIGIBLE_JOBS          HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  AsgElgJobId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : AsgElgJobId 
+  Integration Object Name: AssignmentEligibleJob 
+  User Keys 
+    ** CAT 2 FAIL : SKL-008: AsgElgJobId - The local integration surrogate ID user key extract query could not be created - single index. 
+ 
+    [0] AssignmentNumber, JobCode, BusinessUnitShortCode, FromDate 
+    UK Stage [0] UKVAL001, UKVAL002, UKVAL003, UKDATE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+    JobCode                        PER_JOBS_F_VL                  JOB_CODE                       KeyHelper Resolver VO 
+    BusinessUnitShortCode          FUN_ALL_BUSINESS_UNITS_V       SHORT_CODE                     KeyHelper Resolver VO 
+      ** CAT 2 FAIL : UKL-203: BusinessUnitShortCode - AsgElgJobId - The local user key table and column combination are not found for security assessment in 
+                               FND_TABLES, FND_COLUMNS: FUN_ALL_BUSINESS_UNITS_V.SHORT_CODE. 
+ 
+    FromDate                       PER_ASG_ELIGIBLE_JOBS          FROM_DATE                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : AssignmentId 
+  Integration Object Name: Assignment 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : JobId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Job 
+    Identified by        : DLoadForeignIntegration property [Job;JobId] 
+                           EO association usage 
+  Referenced Table/View  : PER_JOBS_F 
+  Referenced Column      : JOB_ID 
+  User Keys 
+    [0] JobCode, BusinessUnitShortCode 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    JobCode 
+    BusinessUnitShortCode 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  Frequency                      PAY_TMPLT_ET_TIME_DEFINITION 
+  ReliefType                     ORA_PER_RELIEF_TYPE 
+ 
+ 
