@@ -1,0 +1,3 @@
+METADATA|PersonCitizenship|CitizenshipId|PersonId(SourceSystemId)|PersonNumber|DateFrom|DateTo|LegislationCode|CitizenshipStatus|SourceSystemOwner|SourceSystemId|GUID
+MERGE|PersonCitizenship||SYS2_wkr_NEW_2026_001||1990/01/10||IN|A|HDL_LOAD|SYS2_prsn_ctzn_NEW_2026_001|
+MERGE|PersonCitizenship||SYS2_wkr_NEW_2026_002||1990/01/10||IN|A|HDL_LOAD|SYS2_prsn_ctzn_NEW_2026_002|

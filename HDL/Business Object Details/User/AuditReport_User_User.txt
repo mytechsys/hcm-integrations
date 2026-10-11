@@ -1,0 +1,243 @@
+================================================================================================================================= 
+Hierarchy Discriminator : User 
+Object Discriminator    : User 
+Version                 : V2 
+Hierarchy Level         : Top 
+Parent Discriminator    : (null) 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  None found. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : User 
+  UI_DESCRIPTION             : Update requests for the user account for an existing person record. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : User 
+  BUS_OBJ_FILE_DISCRIMINATOR : User 
+  PROCESSING_ORDER           : 160000 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : ORA_HR_USER 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.people.roles.roleServiceV2.view.UserVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : oracle.apps.hcm.people.roles.roleServiceV2.applicationModule.RoleAM 
+  USING_APP_CONFIG           : RoleAMLocal 
+  USING_APP_VIEWUSAGE_NAME   : User 
+  WS_CONNECTION_QNAME        : HcmDataLoaderCoreSetupService 
+  CALLBACK_CONNECTION_QNAME  : HcmDataLoaderEssCallbackService 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : User 
+  Parent Object              : n/a 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  UserId                              PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_USERS                      USER_ID 
+  PersonId                            PVAL002                   PVAL023                PVAL024                Number       18 (null) False     No              PER_USERS                      PERSON_ID 
+  CredentialsEmailSent                PVAL004                   (null)                 (null)                 String       30        False     No              PER_USERS                      CREDENTIALS_EMAIL_SENT 
+  SourceSystemId                      PVAL008                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL009                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  GUID                                PVAL010                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  Username                            PVAL012                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  Suspended                           PVAL013                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  RoleId                              PVAL014                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  RoleCommonName                      PVAL016                   (null)                 (null)                 String     4000        False     No              (null)                         (null) 
+  AddRemoveRole                       PVAL017                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  GenerateUserAccount                 PVAL018                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UserCategory                        PVAL019                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  EmailAddress                        PVAL022                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  EnableTwofactorAuthentication       PVAL020                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  MfaPhone                            PVAL021                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+  OrigSuspended                       PVAL006                   (null)                 (null)                 String       30        False     No              PER_USERS                      SUSPENDED 
+  OrigUsername                        PVAL005                   (null)                 (null)                 String      100        False     No              PER_USERS                      USERNAME 
+  PartyId                             PVAL003                   (null)                 (null)                 Number       18 (null) False     No              PER_USERS                      PARTY_ID 
+  RoleGuid                            PVAL015                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UserGuid                            PVAL007                   (null)                 (null)                 String       64        False     No              PER_USERS                      USER_GUID 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  UserRole                            oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.people.roles.roleServiceV2.view.PersonKeyHelperVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_USER_ACCOUNTS_DATA__PER_ALL_PEOPLE_F__PersonDPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.users.publicModel.entity.UserEO 
+     Table/View             : PER_USERS 
+     Updateable             : True 
+     Integration Object Name: User 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_USERS                      HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  UserId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : UserId 
+  Integration Object Name: User 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  KeyHelper Resolver VO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Not applicable, this is a top level component. 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : Resolver VO + HRC_INTEGRATION_OBJECTS Registry Entry 
+  Referenced Table/View  : PER_ALL_PEOPLE_F 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] PersonNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    PersonNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  Attribute Name         : RoleGuid 
+  Attribute Availability : HDL Hidden 
+    Identified by        : Resolver VO 
+  Referenced Table/View  : PER_ROLES_DN_VL 
+  Referenced Column      : ROLE_ID 
+ 
+  Attribute Name         : RoleId 
+  Attribute Availability : Accepted 
+    Identified by        : Resolver VO 
+  Referenced Table/View  : PER_ROLES_DN_VL 
+  Referenced Column      : ROLE_ID 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 

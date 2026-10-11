@@ -1,0 +1,3 @@
+METADATA,PersonId,EffectiveStartDate,EffectiveEndDate,PersonNumber,BloodType,CorrespondenceLanguage,StartDate,DateOfBirth,DateOfDeath,CountryOfBirth,RegionOfBirth,TownOfBirth,SourceSystemOwner,SourceSystemId,GUID,ActionCode,ReasonCode,PersonDuplicateCheck
+MERGE,,2026/10/09,4712/12/31,,B rhesus negative,German,2026/10/01,1990/01/01,,United States,Mexico,St Louis,HDL_LOAD,wkr_NEW_2026_001,,HIRE,,
+MERGE,,2026/10/10,4712/12/31,,B rhesus negative,German,2026/10/01,1990/01/02,,United States,Mexico,St Louis,HDL_LOAD,wkr_NEW_2026_002,,HIRE,,

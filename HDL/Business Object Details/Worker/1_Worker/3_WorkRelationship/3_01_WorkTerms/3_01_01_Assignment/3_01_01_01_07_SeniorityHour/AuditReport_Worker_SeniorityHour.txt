@@ -1,0 +1,243 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : SeniorityHour 
+Version                 : V2 
+Hierarchy Level         : 5 
+Parent Discriminator    : Assignment 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  None found. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Seniority Hour 
+  UI_DESCRIPTION             : Defines seniority hour for an assignment. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : SeniorityHour 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.SeniorityHourVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : SeniorityHour 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : SeniorityHour 
+  Parent Object              : Assignment 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AssignmentId                        PVAL001                   PVAL008                PVAL009                Number       18 (null) True      Yes             PER_SENIORITY_HOURS            ASSIGNMENT_ID 
+  FromDate                            PDATE001                  (null)                 (null)                 Date                   True      For new records PER_SENIORITY_HOURS            FROM_DATE 
+  Hours                               PVAL002                   (null)                 (null)                 Number       18      5 True      For new records PER_SENIORITY_HOURS            HOURS 
+  SeniorityHourId                     PVAL003                   (null)                 (null)                 Number       18 (null) True      Yes             PER_SENIORITY_HOURS            SENIORITY_HOUR_ID 
+  ToDate                              PDATE002                  (null)                 (null)                 Date                   True      No              PER_SENIORITY_HOURS            TO_DATE 
+  AssignmentNumber                    PVAL004                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  GUID                                PVAL005                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL006                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL007                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    ToDate                              True      No              DLoadAttrsNotRequired property. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  BaseHours                           java.math.BigDecimal   PER_SENIORITY_HOURS            BASE_HOURS                     ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_SENIORITY_HOURS            BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  CreatedBy                           java.lang.String       PER_SENIORITY_HOURS            CREATED_BY                     ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  CreationDate                        java.sql.Timestamp     PER_SENIORITY_HOURS            CREATION_DATE                  ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateDate                      java.sql.Timestamp     PER_SENIORITY_HOURS            LAST_UPDATE_DATE               ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdateLogin                     java.lang.String       PER_SENIORITY_HOURS            LAST_UPDATE_LOGIN              ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  LastUpdatedBy                       java.lang.String       PER_SENIORITY_HOURS            LAST_UPDATED_BY                ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  ObjectVesionNumber                  java.lang.Integer      PER_SENIORITY_HOURS            OBJECT_VESION_NUMBER           ___SDO_HIDDEN___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  PeriodOfServiceId                   java.lang.Long         PER_SENIORITY_HOURS            PERIOD_OF_SERVICE_ID           ___SDO_HIDDEN 
+  PersonId                            java.lang.Long         PER_SENIORITY_HOURS            PERSON_ID                      ___SDO_HIDDEN 
+  Source                              java.lang.String       PER_SENIORITY_HOURS            SOURCE                         ___SDO_HIDDEN 
+  Assignment                          oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    SeniorityHourId                        DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.SeniorityHourVO 
+                                           DLoadLOVDisplayAttributes        : [SeniorityHourId, AssignmentId, FromDate] 
+                                           DLoadLOVReturnAttributes         : SeniorityHourId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_SENIORITY_DATES_DATA__PER_ALL_ASSIGNMENTS_M__SeniorityHourEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.SeniorityHourEO 
+     Table/View             : PER_SENIORITY_HOURS 
+     Updateable             : True 
+     Integration Object Name: SeniorityHour 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_SENIORITY_HOURS            HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  SeniorityHourId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : SeniorityHourId 
+  Integration Object Name: SeniorityHour 
+  User Keys 
+    [0] AssignmentNumber, FromDate 
+    UK Stage [0] UKVAL001, UKDATE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+    FromDate                       PER_SENIORITY_HOURS            FROM_DATE                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : AssignmentId 
+  Integration Object Name: Assignment 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 

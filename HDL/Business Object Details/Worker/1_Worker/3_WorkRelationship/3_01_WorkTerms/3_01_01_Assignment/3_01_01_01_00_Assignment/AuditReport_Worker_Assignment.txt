@@ -1,0 +1,500 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : Assignment 
+Version                 : V2 
+Hierarchy Level         : 4 
+Parent Discriminator    : WorkTerms 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : ATT-003: TaxAddressId - The attribute name suggests a reference surrogate but it is not recognised as such - there is no registered integration object with this exact column name as its surrogate. 
+  CAT 3 FAIL : OBJ-203: CategoryCode - This model mandatory attribute is HDL hidden. 
+  CAT 3 FAIL : OBJ-203: PeriodOfServiceId - This model mandatory attribute is HDL hidden. 
+  CAT 3 FAIL : OBJ-204: LegalEntityId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this rejected attribute. 
+  CAT 2 FAIL : OBJ-206: PeriodOfServiceId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this attribute as the attribute is HDL hidden. 
+  CAT 1 FAIL : SKP-002: WorkTermsAssignmentId - The non-transient parent surrogate ID attribute is not defined as ADF mandatory. 
+  CAT 2 FAIL : SKF-012: BusinessUnitId - This foreign integration reference has a conflicting association with an alternate surrogate column: oracle.apps.hcm.employment.core.publicModel.entity.association.BusinessUnitPEOToBaseWorkerAssignmentDEO - BU_ID 
+  CAT 2 FAIL : SKF-018: BusinessUnitId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 1 FAIL : SKF-003: ContractId - This foreign surrogate ID attribute does not have a KeyHelper defined. 
+  CAT 2 FAIL : SKF-018: OrganizationId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 3 FAIL : SKF-014: PeriodOfServiceId - The DLoadForeignIntegration property is not essential as alternate means exist to identify this foreign key -  + Referenced EO has IntegrationObjectName. 
+  CAT 2 FAIL : SKF-004: PeriodOfServiceId - Surrogate ID attributes that reference integration enabled objects must not be hidden. 
+  CAT 2 FAIL : SKF-018: ProposedWorkerType - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name PersonType: [PersonType,V2,PersonType]. 
+  CAT 2 FAIL : SKF-018: UnionId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 1 FAIL : LOV-001: AssignmentType - The HcmLookup attribute has a configuration problem - attribute definition has no HcmLookup specified. 
+  CAT 1 FAIL : LOV-001: BargainingUnitCode - The HcmLookup attribute has a configuration problem - attribute definition has no HcmLookup specified. 
+ 
+ 
+Information Summary 
+=================== 
+A selection of notable information analysed for this object. 
+ 
+  CAT 2 INFO : REV-001: Notes - QA_AND_DOC_REVIEW - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This new visible attribute changes a shipping HDL interface. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Assignment 
+  UI_DESCRIPTION             : A set of information about a person assignment. The assignment includes the person's job, position, grade, department and 
+                               location. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : Assignment 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : Assignment 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : Assignment 
+  Parent Object              : WorkTerms 
+  Translation Object         : (null) 
+  Date Type                  : Multiple Changes Per Day 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : DFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ActionCode                          PVAL001                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          ACTION_CODE 
+  AssignmentId                        PVAL002                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_ID 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_START_DATE 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_ALL_ASSIGNMENTS_M          EFFECTIVE_END_DATE 
+  EffectiveSequence                   P_EFFECTIVE_SEQUENCE      (null)                 (null)                 Number        4 (null) True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_SEQUENCE 
+  EffectiveLatestChange               P_EFFECTIVE_LATEST_CHANGE (null)                 (null)                 String       30        True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_LATEST_CHANGE 
+  AssignmentType                      PVAL003                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_TYPE 
+  AssignmentName                      PVAL004                   (null)                 (null)                 String       80        False     No              PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NAME 
+  AssignmentNumber                    PVAL005                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER 
+  AssignmentStatusTypeCode            PVAL006                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_STATUS_TYPE 
+  AssignmentStatusTypeId              PVAL007                   PVAL116                PVAL117                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_STATUS_TYPE_ID 
+  BargainingUnitCode                  PVAL008                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          BARGAINING_UNIT_CODE 
+  BillingTitle                        PVAL009                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          BILLING_TITLE 
+  BusinessUnitId                      PVAL010                   PVAL144                PVAL145                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          BUSINESS_UNIT_ID 
+  BusinessUnitShortCode               PVAL011                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+  CollectiveAgreementId               PVAL012                   PVAL136                PVAL137                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          COLLECTIVE_AGREEMENT_ID 
+  ContractId                          PVAL013                   PVAL124                PVAL125                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          CONTRACT_ID 
+  DateProbationEnd                    PDATE001                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          DATE_PROBATION_END 
+  WorkerCategory                      PVAL014                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EMPLOYEE_CATEGORY 
+  AssignmentCategory                  PVAL015                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EMPLOYMENT_CATEGORY 
+  EstablishmentId                     PVAL016                   PVAL128                PVAL129                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          ESTABLISHMENT_ID 
+  ReportingEstablishment              PVAL017                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ExpenseCheckSendToAddress           PVAL018                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EXPENSE_CHECK_ADDRESS 
+  GradeId                             PVAL019                   PVAL130                PVAL131                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          GRADE_ID 
+  GradeCode                           PVAL020                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  GradeLadderPgmId                    PVAL021                   PVAL126                PVAL127                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          GRADE_LADDER_PGM_ID 
+  GradeLadderPgmName                  PVAL022                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  HourlySalariedCode                  PVAL023                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          HOURLY_SALARIED_CODE 
+  InternalBuilding                    PVAL024                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_BUILDING 
+  InternalFloor                       PVAL025                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_FLOOR 
+  InternalLocation                    PVAL026                   (null)                 (null)                 String       80        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_LOCATION 
+  InternalMailstop                    PVAL027                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_MAILSTOP 
+  InternalOfficeNumber                PVAL028                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_OFFICE_NUMBER 
+  JobId                               PVAL029                   PVAL114                PVAL115                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          JOB_ID 
+  JobCode                             PVAL030                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LabourUnionMemberFlag               PVAL031                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          LABOUR_UNION_MEMBER_FLAG 
+  LocationCode                        PVAL032                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+  LocationId                          PVAL033                   PVAL132                PVAL133                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          LOCATION_ID 
+  ManagerFlag                         PVAL034                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          MANAGER_FLAG 
+  NormalHours                         PVAL035                   (null)                 (null)                 Number       22      3 False     No              PER_ALL_ASSIGNMENTS_M          NORMAL_HOURS 
+  Frequency                           PVAL036                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          FREQUENCY 
+  NoticePeriod                        PVAL037                   (null)                 (null)                 Number       10 (null) False     No              PER_ALL_ASSIGNMENTS_M          NOTICE_PERIOD 
+  NoticePeriodUOM                     PVAL038                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          NOTICE_PERIOD_UOM 
+  OrganizationId                      PVAL039                   PVAL120                PVAL121                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          ORGANIZATION_ID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PersonId                            PVAL042                   PVAL112                PVAL113                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          PERSON_ID 
+  DateStart                           PDATE002                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  WorkerType                          PVAL043                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LegalEmployerName                   PVAL044                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  PersonTypeCode                      PVAL045                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  PersonTypeId                        PVAL046                   PVAL118                PVAL119                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          PERSON_TYPE_ID 
+  PositionCode                        PVAL047                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PositionId                          PVAL048                   PVAL134                PVAL135                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          POSITION_ID 
+  PositionOverrideFlag                PVAL049                   (null)                 (null)                 String       30        True      No              PER_ALL_ASSIGNMENTS_M          POSITION_OVERRIDE_FLAG 
+  PrimaryAssignmentFlag               PVAL050                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          PRIMARY_ASSIGNMENT_FLAG 
+  PrimaryFlag                         PVAL051                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          PRIMARY_FLAG 
+  ProbationPeriod                     PVAL052                   (null)                 (null)                 Number       25      5 False     No              PER_ALL_ASSIGNMENTS_M          PROBATION_PERIOD 
+  ProbationUnit                       PVAL053                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          PROBATION_UNIT 
+  ProjectTitle                        PVAL054                   (null)                 (null)                 String       80        False     No              PER_ALL_ASSIGNMENTS_M          PROJECT_TITLE 
+  ProjectedEndDate                    PDATE003                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          PROJECTED_ASSIGNMENT_END 
+  ProjectedStartDate                  PDATE004                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          PROJECTED_START_DATE 
+  ProposedUserPersonType              PVAL055                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  ProposedWorkerType                  PVAL056                   PVAL138                PVAL139                String       30        False     No              PER_ALL_ASSIGNMENTS_M          PROPOSED_WORKER_TYPE 
+  ReasonCode                          PVAL057                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          REASON_CODE 
+  RetirementAge                       PVAL058                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          RETIREMENT_AGE 
+  RetirementDate                      PDATE005                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          RETIREMENT_DATE 
+  SpecialCeilingStep                  PVAL059                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  SpecialCeilingStepId                PVAL060                   PVAL122                PVAL123                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          SPECIAL_CEILING_STEP_ID 
+  SystemPersonType                    PVAL061                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          SYSTEM_PERSON_TYPE 
+  TaxAddressId                        PVAL062                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          TAX_ADDRESS_ID 
+    ** CAT 2 FAIL : ATT-003: TaxAddressId - The attribute name suggests a reference surrogate but it is not recognised as such - there is no registered 
+                             integration object with this exact column name as its surrogate. 
+ 
+  EndTime                             PVAL063                   (null)                 (null)                 String        5        False     No              PER_ALL_ASSIGNMENTS_M          TIME_NORMAL_FINISH 
+  StartTime                           PVAL064                   (null)                 (null)                 String        5        False     No              PER_ALL_ASSIGNMENTS_M          TIME_NORMAL_START 
+  WorkAtHomeFlag                      PVAL066                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          WORK_AT_HOME 
+  WorkTermsNumber                     PVAL067                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  WorkTermsAssignmentId               PVAL068                   PVAL110                PVAL111                Number       18 (null) False     Yes             PER_ALL_ASSIGNMENTS_M          WORK_TERMS_ASSIGNMENT_ID 
+  DepartmentName                      PVAL069                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  FreezeStartDate                     PDATE006                  (null)                 (null)                 Date                   True      No              PER_ALL_ASSIGNMENTS_M          FREEZE_START_DATE 
+  FreezeUntilDate                     PDATE007                  (null)                 (null)                 Date                   True      No              PER_ALL_ASSIGNMENTS_M          FREEZE_UNTIL_DATE 
+  GUID                                PVAL071                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL072                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL073                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  PeopleGroup                         PVAL075                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  FullPartTime                        PVAL076                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          FULL_PART_TIME 
+  PermanentTemporary                  PVAL077                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          PERMANENT_TEMPORARY_FLAG 
+  CollectiveAgreementIdCode           PVAL078                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  GspEligibilityFlag                  PVAL079                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          GSP_ELIGIBILITY_FLAG 
+  DefaultExpenseAccount               PVAL080                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UnionId                             PVAL081                   PVAL142                PVAL143                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          UNION_ID 
+  SeniorityBasis                      PVAL082                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          SENIORITY_BASIS 
+  UnionName                           PVAL083                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  OvertimePeriodName                  PVAL084                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  SourceAssignmentId                  PVAL085                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          SOURCE_ASSIGNMENT_ID 
+  SourceAssignmentNumber              PVAL086                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  TaxReportingUnitId                  PVAL087                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  TaxReportingUnit                    PVAL088                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  ContractNumber                      PVAL089                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  TerminationDate                     PDATE008                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          TERMINATION_DATE 
+  NotificationDate                    PDATE009                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          NOTIFICATION_DATE 
+  LastWorkingDate                     PDATE010                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          LAST_WORKING_DATE 
+  ReviewUserAccess                    PVAL090                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          REVIEW_USER_ACCESS 
+  RehireRecommendation                PVAL091                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          REHIRE_RECOMMENDATION 
+  RehireReason                        PVAL092                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          REHIRE_REASON 
+  RehireAuthorizerPersonId            PVAL093                   PVAL150                PVAL151                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          REHIRE_AUTHORIZER_PERSON_ID 
+  RehireAuthorizerPersonNumber        PVAL_SECURE002            (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  TerminateAssignmentFlag             PVAL095                   (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  CorrectAssignmentTerminationFlag    PVAL096                   (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  ReverseAssignmentTerminationFlag    PVAL097                   (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  OfferId                             PVAL098                   PVAL146                PVAL147                Number       18 (null) False     No              (null)                         (null) 
+  CandidateNumber                     PVAL099                   (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  RequisitionId                       PVAL100                   PVAL148                PVAL149                Number       18 (null) False     No              (null)                         (null) 
+  RequisitionNumber                   PVAL101                   (null)                 (null)                 String      255        False     No              (null)                         (null) 
+  AdjustedFte                         PVAL102                   (null)                 (null)                 Number       30     10 False     No              PER_ALL_ASSIGNMENTS_M          ADJUSTED_FTE 
+  AnnualWorkingDuration               PVAL103                   (null)                 (null)                 Number        8      4 False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_DURATION 
+  AnnualWorkingDurationUnits          PVAL104                   (null)                 (null)                 String       20        False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_DURATION_UNITS 
+  AnnualWorkingRatio                  PVAL105                   (null)                 (null)                 Number        8      5 False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_RATIO 
+  StandardFrequencyDB                 PVAL106                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          STANDARD_FREQUENCY 
+  StandardHours                       PVAL107                   (null)                 (null)                 Number       22      3 False     No              PER_ALL_ASSIGNMENTS_M          STANDARD_HOURS 
+  StdAnnualWorkingDuration            PVAL108                   (null)                 (null)                 Number        8      4 False     No              PER_ALL_ASSIGNMENTS_M          STD_ANNUAL_WORKING_DURATION 
+  Notes                               PVAL109                   (null)                 (null)                 String     4000        False     No              (null)                         (null) 
+    ** CAT 2 INFO : REV-001: Notes - QA_AND_DOC_REVIEW - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This new visible attribute changes a shipping HDL interface. 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+    FreezeStartDate                     True      No              DLoadAttrsNotRequired property. 
+    FreezeUntilDate                     True      No              DLoadAttrsNotRequired property. 
+    PositionOverrideFlag                True      No              DLoadAttrsNotRequired property. 
+    WorkTermsAssignmentId               False     Yes             Parent surrogate key is mandatory. 
+ 
+  Deprecated Attributes 
+  --------------------- 
+  Attributes that are currently accepted but marked as deprecated and will be hidden in a future release. 
+ 
+    Attribute Name 
+    ----------------------------------- 
+    BillingTitle 
+    InternalLocation 
+    PersonId 
+    PrimaryFlag 
+    ProjectTitle 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  CategoryCode                        PVAL074                   (null)                 (null)                 String       80        True      No              PER_ALL_ASSIGNMENTS_M          CATEGORY_CODE 
+    ** CAT 3 FAIL : OBJ-203: CategoryCode - This model mandatory attribute is HDL hidden. 
+ 
+  PeriodOfServiceId                   PVAL040                   PVAL140                PVAL141                Number       18 (null) True      No              PER_ALL_ASSIGNMENTS_M          PERIOD_OF_SERVICE_ID 
+    ** CAT 3 FAIL : OBJ-203: PeriodOfServiceId - This model mandatory attribute is HDL hidden. 
+ 
+  VendorId                            PVAL070                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          VENDOR_ID 
+  VendorSiteId                        PVAL065                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          VENDOR_SITE_ID 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ApplicantRank                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          APPLICANT_RANK                 ___SDO_HIDDEN___READONLY 
+  ActionOccurrenceIdPopulatedFlag     java.lang.String       PER_ALL_ASSIGNMENTS_M          (null)                         ___SDO_HIDDEN 
+  ActionOccurrenceId                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          ACTION_OCCURRENCE_ID           ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_ALL_ASSIGNMENTS_M          OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  AssignmentSequence                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_SEQUENCE            ___SDO_HIDDEN 
+  AutoEndFlag                         java.lang.String       PER_ALL_ASSIGNMENTS_M          AUTO_END_FLAG                  ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_ALL_ASSIGNMENTS_M          BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  CagrGradeDefId                      java.lang.Long         PER_ALL_ASSIGNMENTS_M          CAGR_GRADE_DEF_ID              ___SDO_HIDDEN 
+  CagrIdFlexNum                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          CAGR_ID_FLEX_NUM               ___SDO_HIDDEN 
+  DefaultCodeCombId                   java.lang.Long         PER_ALL_ASSIGNMENTS_M          DEFAULT_CODE_COMB_ID           ___SDO_HIDDEN 
+  DutiesType                          java.lang.String       PER_ALL_ASSIGNMENTS_M          DUTIES_TYPE                    ___SDO_HIDDEN 
+  IdFlexNum                           java.lang.Long         PER_ALL_ASSIGNMENTS_M          ID_FLEX_NUM                    ___SDO_HIDDEN 
+  JobPostSourceName                   java.lang.String       PER_ALL_ASSIGNMENTS_M          JOB_POST_SOURCE_NAME           ___SDO_HIDDEN 
+  LegislationCode                     java.lang.String       PER_ALL_ASSIGNMENTS_M          LEGISLATION_CODE               ___SDO_HIDDEN 
+  LinkageType                         java.lang.String       PER_ALL_ASSIGNMENTS_M          LINKAGE_TYPE                   ___SDO_HIDDEN 
+  ParentAssignmentId                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          PARENT_ASSIGNMENT_ID           ___SDO_HIDDEN 
+  PeopleGroupId                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          PEOPLE_GROUP_ID                ___SDO_HIDDEN 
+  PersonReferredById                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          PERSON_REFERRED_BY_ID          ___SDO_HIDDEN___READONLY 
+  PostingContentId                    java.lang.Long         PER_ALL_ASSIGNMENTS_M          POSTING_CONTENT_ID             ___SDO_HIDDEN 
+  PrimaryWorkRelationFlag             java.lang.String       PER_ALL_ASSIGNMENTS_M          PRIMARY_WORK_RELATION_FLAG     ___SDO_HIDDEN 
+  RecordCreator                       java.lang.String       PER_ALL_ASSIGNMENTS_M          RECORD_CREATOR                 ___SDO_HIDDEN 
+  RecruiterId                         java.lang.Long         PER_ALL_ASSIGNMENTS_M          RECRUITER_ID                   ___SDO_HIDDEN___READONLY 
+  RecruitmentActivityId               java.lang.Long         PER_ALL_ASSIGNMENTS_M          RECRUITMENT_ACTIVITY_ID        ___SDO_HIDDEN___READONLY 
+  SalReviewPeriod                     java.lang.Long         PER_ALL_ASSIGNMENTS_M          SAL_REVIEW_PERIOD              ___SDO_HIDDEN 
+  SalReviewPeriodFrequency            java.lang.String       PER_ALL_ASSIGNMENTS_M          SAL_REVIEW_PERIOD_FREQUENCY    ___SDO_HIDDEN 
+  SetOfBooksId                        java.lang.Long         PER_ALL_ASSIGNMENTS_M          SET_OF_BOOKS_ID                ___SDO_HIDDEN 
+  SkipDefaultingFlag                  java.lang.Boolean      PER_ALL_ASSIGNMENTS_M          (null)                         ___SDO_HIDDEN 
+  SoftCodingKeyflexId                 java.lang.Long         PER_ALL_ASSIGNMENTS_M          SOFT_CODING_KEYFLEX_ID         ___SDO_HIDDEN 
+  SourceOrganizationId                java.lang.Long         PER_ALL_ASSIGNMENTS_M          SOURCE_ORGANIZATION_ID         ___SDO_HIDDEN___READONLY 
+  SourceType                          java.lang.String       PER_ALL_ASSIGNMENTS_M          SOURCE_TYPE                    ___SDO_HIDDEN 
+  StepEntryDate                       java.sql.Date          PER_ALL_ASSIGNMENTS_M          STEP_ENTRY_DATE                ___SDO_HIDDEN 
+  VacancyId                           java.lang.Long         PER_ALL_ASSIGNMENTS_M          VACANCY_ID                     ___SDO_HIDDEN___READONLY 
+  VendorAssignmentNumber              java.lang.String       PER_ALL_ASSIGNMENTS_M          VENDOR_ASSIGNMENT_NUMBER       ___SDO_HIDDEN 
+  VendorEmployeeNumber                java.lang.String       PER_ALL_ASSIGNMENTS_M          VENDOR_EMPLOYEE_NUMBER         ___SDO_HIDDEN 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  DfltIdFlexNum                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  LegalEntityId                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          LEGAL_ENTITY_ID                ___SDO_HIDDEN 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeStartSequence                  java.lang.Integer      (null)                         (null)                         ___in_ATTR_TRANSIENT_list___UnknownAttributeSQLType:INTEGER 
+  RangeEndSequence                    java.lang.Integer      (null)                         (null)                         ___in_ATTR_TRANSIENT_list___UnknownAttributeSQLType:INTEGER 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list___READONLY 
+  LocationSetId                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  JobSetId                            java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  GradeSetId                          java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  AssAttribute1                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE1                 ___SDO_HIDDEN 
+  AssAttribute10                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE10                ___SDO_HIDDEN 
+  AssAttribute11                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE11                ___SDO_HIDDEN 
+  AssAttribute12                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE12                ___SDO_HIDDEN 
+  AssAttribute13                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE13                ___SDO_HIDDEN 
+  AssAttribute14                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE14                ___SDO_HIDDEN 
+  AssAttribute15                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE15                ___SDO_HIDDEN 
+  AssAttribute16                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE16                ___SDO_HIDDEN 
+  AssAttribute17                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE17                ___SDO_HIDDEN 
+  AssAttribute18                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE18                ___SDO_HIDDEN 
+  AssAttribute19                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE19                ___SDO_HIDDEN 
+  AssAttribute2                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE2                 ___SDO_HIDDEN 
+  AssAttribute20                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE20                ___SDO_HIDDEN 
+  AssAttribute21                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE21                ___SDO_HIDDEN 
+  AssAttribute22                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE22                ___SDO_HIDDEN 
+  AssAttribute23                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE23                ___SDO_HIDDEN 
+  AssAttribute24                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE24                ___SDO_HIDDEN 
+  AssAttribute25                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE25                ___SDO_HIDDEN 
+  AssAttribute26                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE26                ___SDO_HIDDEN 
+  AssAttribute27                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE27                ___SDO_HIDDEN 
+  AssAttribute28                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE28                ___SDO_HIDDEN 
+  AssAttribute29                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE29                ___SDO_HIDDEN 
+  AssAttribute3                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE3                 ___SDO_HIDDEN 
+  AssAttribute30                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE30                ___SDO_HIDDEN 
+  AssAttribute31                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE31                ___SDO_HIDDEN 
+  AssAttribute32                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE32                ___SDO_HIDDEN 
+  AssAttribute33                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE33                ___SDO_HIDDEN 
+  AssAttribute34                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE34                ___SDO_HIDDEN 
+  AssAttribute35                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE35                ___SDO_HIDDEN 
+  AssAttribute36                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE36                ___SDO_HIDDEN 
+  AssAttribute37                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE37                ___SDO_HIDDEN 
+  AssAttribute38                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE38                ___SDO_HIDDEN 
+  AssAttribute39                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE39                ___SDO_HIDDEN 
+  AssAttribute4                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE4                 ___SDO_HIDDEN 
+  AssAttribute40                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE40                ___SDO_HIDDEN 
+  AssAttribute41                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE41                ___SDO_HIDDEN 
+  AssAttribute42                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE42                ___SDO_HIDDEN 
+  AssAttribute43                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE43                ___SDO_HIDDEN 
+  AssAttribute44                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE44                ___SDO_HIDDEN 
+  AssAttribute45                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE45                ___SDO_HIDDEN 
+  AssAttribute46                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE46                ___SDO_HIDDEN 
+  AssAttribute47                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE47                ___SDO_HIDDEN 
+  AssAttribute48                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE48                ___SDO_HIDDEN 
+  AssAttribute49                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE49                ___SDO_HIDDEN 
+  AssAttribute5                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE5                 ___SDO_HIDDEN 
+  AssAttribute50                      java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE50                ___SDO_HIDDEN 
+  AssAttribute6                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE6                 ___SDO_HIDDEN 
+  AssAttribute7                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE7                 ___SDO_HIDDEN 
+  AssAttribute8                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE8                 ___SDO_HIDDEN 
+  AssAttribute9                       java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE9                 ___SDO_HIDDEN 
+  AssAttributeCategory                java.lang.String       PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_CATEGORY         ___SDO_HIDDEN 
+  AssAttributeDate1                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE1            ___SDO_HIDDEN 
+  AssAttributeDate10                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE10           ___SDO_HIDDEN 
+  AssAttributeDate11                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE11           ___SDO_HIDDEN 
+  AssAttributeDate12                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE12           ___SDO_HIDDEN 
+  AssAttributeDate13                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE13           ___SDO_HIDDEN 
+  AssAttributeDate14                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE14           ___SDO_HIDDEN 
+  AssAttributeDate15                  java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE15           ___SDO_HIDDEN 
+  AssAttributeDate2                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE2            ___SDO_HIDDEN 
+  AssAttributeDate3                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE3            ___SDO_HIDDEN 
+  AssAttributeDate4                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE4            ___SDO_HIDDEN 
+  AssAttributeDate5                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE5            ___SDO_HIDDEN 
+  AssAttributeDate6                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE6            ___SDO_HIDDEN 
+  AssAttributeDate7                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE7            ___SDO_HIDDEN 
+  AssAttributeDate8                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE8            ___SDO_HIDDEN 
+  AssAttributeDate9                   java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_DATE9            ___SDO_HIDDEN 
+  AssAttributeNumber1                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER1          ___SDO_HIDDEN 
+  AssAttributeNumber10                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER10         ___SDO_HIDDEN 
+  AssAttributeNumber11                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER11         ___SDO_HIDDEN 
+  AssAttributeNumber12                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER12         ___SDO_HIDDEN 
+  AssAttributeNumber13                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER13         ___SDO_HIDDEN 
+  AssAttributeNumber14                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER14         ___SDO_HIDDEN 
+  AssAttributeNumber15                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER15         ___SDO_HIDDEN 
+  AssAttributeNumber16                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER16         ___SDO_HIDDEN 
+  AssAttributeNumber17                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER17         ___SDO_HIDDEN 
+  AssAttributeNumber18                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER18         ___SDO_HIDDEN 
+  AssAttributeNumber19                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER19         ___SDO_HIDDEN 
+  AssAttributeNumber2                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER2          ___SDO_HIDDEN 
+  AssAttributeNumber20                java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER20         ___SDO_HIDDEN 
+  AssAttributeNumber3                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER3          ___SDO_HIDDEN 
+  AssAttributeNumber4                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER4          ___SDO_HIDDEN 
+  AssAttributeNumber5                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER5          ___SDO_HIDDEN 
+  AssAttributeNumber6                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER6          ___SDO_HIDDEN 
+  AssAttributeNumber7                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER7          ___SDO_HIDDEN 
+  AssAttributeNumber8                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER8          ___SDO_HIDDEN 
+  AssAttributeNumber9                 java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASS_ATTRIBUTE_NUMBER9          ___SDO_HIDDEN 
+  OvertimePeriod                      java.lang.Long         PER_ALL_ASSIGNMENTS_M          OVERTIME_PERIOD                ___SDO_HIDDEN 
+  OvertimePeriodCode                  java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  AsgInformation1                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION1               ___SDO_HIDDEN 
+  AsgInformation10                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION10              ___SDO_HIDDEN 
+  AsgInformation11                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION11              ___SDO_HIDDEN 
+  AsgInformation12                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION12              ___SDO_HIDDEN 
+  AsgInformation13                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION13              ___SDO_HIDDEN 
+  AsgInformation14                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION14              ___SDO_HIDDEN 
+  AsgInformation15                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION15              ___SDO_HIDDEN 
+  AsgInformation16                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION16              ___SDO_HIDDEN 
+  AsgInformation17                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION17              ___SDO_HIDDEN 
+  AsgInformation18                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION18              ___SDO_HIDDEN 
+  AsgInformation19                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION19              ___SDO_HIDDEN 
+  AsgInformation2                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION2               ___SDO_HIDDEN 
+  AsgInformation20                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION20              ___SDO_HIDDEN 
+  AsgInformation21                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION21              ___SDO_HIDDEN 
+  AsgInformation22                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION22              ___SDO_HIDDEN 
+  AsgInformation23                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION23              ___SDO_HIDDEN 
+  AsgInformation24                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION24              ___SDO_HIDDEN 
+  AsgInformation25                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION25              ___SDO_HIDDEN 
+  AsgInformation26                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION26              ___SDO_HIDDEN 
+  AsgInformation27                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION27              ___SDO_HIDDEN 
+  AsgInformation28                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION28              ___SDO_HIDDEN 
+  AsgInformation29                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION29              ___SDO_HIDDEN 
+  AsgInformation3                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION3               ___SDO_HIDDEN 
+  AsgInformation30                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION30              ___SDO_HIDDEN 
+  AsgInformation31                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION31              ___SDO_HIDDEN 
+  AsgInformation32                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION32              ___SDO_HIDDEN 
+  AsgInformation33                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION33              ___SDO_HIDDEN 
+  AsgInformation34                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION34              ___SDO_HIDDEN 
+  AsgInformation35                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION35              ___SDO_HIDDEN 
+  AsgInformation36                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION36              ___SDO_HIDDEN 
+  AsgInformation37                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION37              ___SDO_HIDDEN 
+  AsgInformation38                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION38              ___SDO_HIDDEN 
+  AsgInformation39                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION39              ___SDO_HIDDEN 
+  AsgInformation4                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION4               ___SDO_HIDDEN 
+  AsgInformation40                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION40              ___SDO_HIDDEN 
+  AsgInformation41                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION41              ___SDO_HIDDEN 
+  AsgInformation42                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION42              ___SDO_HIDDEN 
+  AsgInformation43                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION43              ___SDO_HIDDEN 
+  AsgInformation44                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION44              ___SDO_HIDDEN 
+  AsgInformation45                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION45              ___SDO_HIDDEN 
+  AsgInformation46                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION46              ___SDO_HIDDEN 
+  AsgInformation47                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION47              ___SDO_HIDDEN 
+  AsgInformation48                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION48              ___SDO_HIDDEN 
+  AsgInformation49                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION49              ___SDO_HIDDEN 
+  AsgInformation5                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION5               ___SDO_HIDDEN 
+  AsgInformation50                    java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION50              ___SDO_HIDDEN 
+  AsgInformation6                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION6               ___SDO_HIDDEN 
+  AsgInformation7                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION7               ___SDO_HIDDEN 
+  AsgInformation8                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION8               ___SDO_HIDDEN 
+  AsgInformation9                     java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION9               ___SDO_HIDDEN 
+  AsgInformationCategory              java.lang.String       PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_CATEGORY       ___SDO_HIDDEN 
+  AsgInformationDate1                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE1          ___SDO_HIDDEN 
+  AsgInformationDate10                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE10         ___SDO_HIDDEN 
+  AsgInformationDate11                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE11         ___SDO_HIDDEN 
+  AsgInformationDate12                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE12         ___SDO_HIDDEN 
+  AsgInformationDate13                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE13         ___SDO_HIDDEN 
+  AsgInformationDate14                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE14         ___SDO_HIDDEN 
+  AsgInformationDate15                java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE15         ___SDO_HIDDEN 
+  AsgInformationDate2                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE2          ___SDO_HIDDEN 
+  AsgInformationDate3                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE3          ___SDO_HIDDEN 
+  AsgInformationDate4                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE4          ___SDO_HIDDEN 
+  AsgInformationDate5                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE5          ___SDO_HIDDEN 
+  AsgInformationDate6                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE6          ___SDO_HIDDEN 
+  AsgInformationDate7                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE7          ___SDO_HIDDEN 
+  AsgInformationDate8                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE8          ___SDO_HIDDEN 
+  AsgInformationDate9                 java.sql.Date          PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_DATE9          ___SDO_HIDDEN 
+  AsgInformationNumber1               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER1        ___SDO_HIDDEN 
+  AsgInformationNumber10              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER10       ___SDO_HIDDEN 
+  AsgInformationNumber11              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER11       ___SDO_HIDDEN 
+  AsgInformationNumber12              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER12       ___SDO_HIDDEN 
+  AsgInformationNumber13              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER13       ___SDO_HIDDEN 
+  AsgInformationNumber14              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER14       ___SDO_HIDDEN 
+  AsgInformationNumber15              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER15       ___SDO_HIDDEN 
+  AsgInformationNumber16              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER16       ___SDO_HIDDEN 
+  AsgInformationNumber17              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER17       ___SDO_HIDDEN 
+  AsgInformationNumber18              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER18       ___SDO_HIDDEN 
+  AsgInformationNumber19              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER19       ___SDO_HIDDEN 
+  AsgInformationNumber2               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER2        ___SDO_HIDDEN 
+  AsgInformationNumber20              java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER20       ___SDO_HIDDEN 
+  AsgInformationNumber3               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER3        ___SDO_HIDDEN 
+  AsgInformationNumber4               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER4        ___SDO_HIDDEN 
+  AsgInformationNumber5               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER5        ___SDO_HIDDEN 
+  AsgInformationNumber6               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER6        ___SDO_HIDDEN 
+  AsgInformationNumber7               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER7        ___SDO_HIDDEN 
+  AsgInformationNumber8               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER8        ___SDO_HIDDEN 
+  AsgInformationNumber9               java.math.BigDecimal   PER_ALL_ASSIGNMENTS_M          ASG_INFORMATION_NUMBER9        ___SDO_HIDDEN 
+  AssignmentWorkMeasure               oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  AssignmentExtraInformation          oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  AssignmentSupervisor                oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  AssignmentGradeSteps                oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  BaseWorkerAsgDFF                    oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  BaseWorkerAsgLegDDF                 oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 

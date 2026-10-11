@@ -1,0 +1,6 @@
+METADATA,ElementEntry,AssignmentId,CreatorType,DateEarned,EffectiveEndDate,EffectiveStartDate,ElementEntryId,ElementTypeId,ElementName,LegislativeDataGroupId,LegislativeDataGroupName,EntryType,Reason,Subpriority,AssignmentNumber,MultipleEntryCount,SourceSystemOwner,SourceSystemId,GUID,HrAssignmentId
+MERGE,ElementEntry,,F,2026/10/01,,2026/10/01,,,Regular Salary,,US Legislative Data Group,E,Element Entry HDL Load,,E8083,,HDL_LOAD,SYS2_ELEM_NEW_2026_001,,
+MERGE,ElementEntry,,F,2026/10/01,,2026/10/01,,,Regular Salary,,US Legislative Data Group,E,Element Entry HDL Load,,E8084,,HDL_LOAD,SYS2_ELEM_NEW_2026_002,,
+METADATA,ElementEntryValue,EffectiveEndDate,EffectiveStartDate,ElementEntryValueId,InputValueId,InputValueName,ScreenEntryValue,ElementEntryId(SourceSystemId),AssignmentNumber,ElementTypeId,ElementName,LegislativeDataGroupId,LegislativeDataGroupName,SourceSystemOwner,SourceSystemId,GUID,MultipleEntryCount,AssignmentId,EntryType,HrAssignmentId
+MERGE,ElementEntryValue,,2026/10/01,,,Amount,1000,SYS2_ELEM_NEW_2026_001,E8083,,Regular Salary,,US Legislative Data Group,HDL_LOAD,SYS2_ELEM_ENTRY_VAL_NEW_2026_001,,,,E,
+MERGE,ElementEntryValue,,2026/10/01,,,Amount,1000,SYS2_ELEM_NEW_2026_002,E8084,,Regular Salary,,US Legislative Data Group,HDL_LOAD,SYS2_ELEM_ENTRY_VAL_NEW_2026_002,,,,E,

@@ -1,0 +1,4 @@
+METADATA|PersonPhone|PhoneId|PhoneType|DateFrom|DateTo|PersonId(SourceSystemId)|PersonNumber|CountryCodeNumber|LegislationCode|AreaCode|PhoneNumber|Extension|SpeedDialNumber|Validity|PrimaryFlag|SourceSystemOwner|SourceSystemId|GUID
+MERGE|PersonPhone||W1|2023/01/01||SYS2_wkr_NEW_2026_001||1|US|100|1002222|||A|Y|HDL_LOAD|SYS2_prsn_phone_NEW_2026_001|
+MERGE|PersonPhone||H1|2023/01/01||SYS2_wkr_NEW_2026_002||1|US|100|1003333|||A|Y|HDL_LOAD|SYS2_prsn_phone_NEW_2026_002|
+MERGE|PersonPhone||HM|2023/01/01||SYS2_wkr_NEW_2026_002||1|US|100|1004444|||A||HDL_LOAD|SYS2_prsn_phone_NEW_2026_003|

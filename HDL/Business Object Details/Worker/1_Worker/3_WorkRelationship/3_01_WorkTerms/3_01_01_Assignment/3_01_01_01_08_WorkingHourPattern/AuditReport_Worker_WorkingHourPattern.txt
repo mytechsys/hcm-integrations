@@ -1,0 +1,278 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : WorkingHourPattern 
+Version                 : V2 
+Hierarchy Level         : 5 
+Parent Discriminator    : Assignment 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : ATT-003: PersonId - The attribute name suggests a reference surrogate but it is not recognised as such - there is a registered integration object with this exact column name as its surrogate. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Working Hour Pattern 
+  UI_DESCRIPTION             : The pattern of working hours for an assignment. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : WorkingHourPattern 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkingHourPatternVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkingHourPattern 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : WorkingHourPattern 
+  Parent Object              : Assignment 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : Yes 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  WorkingHourPatternId                PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_WORKING_HOUR_PATTERNS_F    WORKING_HOUR_PATTERN_ID 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_WORKING_HOUR_PATTERNS_F    EFFECTIVE_START_DATE 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_WORKING_HOUR_PATTERNS_F    EFFECTIVE_END_DATE 
+  Object                              PVAL002                   (null)                 (null)                 String       30        True      For new records PER_WORKING_HOUR_PATTERNS_F    OBJECT 
+  ObjectId                            PVAL003                   PVAL036                PVAL037                Number       18 (null) True      Yes             PER_WORKING_HOUR_PATTERNS_F    OBJECT_ID 
+  AssignmentNumber                    PVAL004                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PersonId                            PVAL005                   (null)                 (null)                 Number       18 (null) False     No              PER_WORKING_HOUR_PATTERNS_F    PERSON_ID 
+    ** CAT 2 FAIL : ATT-003: PersonId - The attribute name suggests a reference surrogate but it is not recognised as such - there is a registered integration 
+                             object with this exact column name as its surrogate. 
+ 
+  WorkingHoursType                    PVAL006                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    WORKING_HOURS_TYPE 
+  DefaultStartDay                     PVAL007                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    DEFAULT_START_DAY 
+  MonStartTime                        PVAL008                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    MON_START_TIME 
+  MonEndTime                          PVAL009                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    MON_END_TIME 
+  MonHours                            PVAL010                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    MON_HOURS 
+  TueStartTime                        PVAL011                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    TUE_START_TIME 
+  TueEndTime                          PVAL012                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    TUE_END_TIME 
+  TueHours                            PVAL013                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    TUE_HOURS 
+  WedStartTime                        PVAL014                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    WED_START_TIME 
+  WedEndTime                          PVAL015                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    WED_END_TIME 
+  WedHours                            PVAL016                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    WED_HOURS 
+  ThuStartTime                        PVAL017                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    THU_START_TIME 
+  ThuEndTime                          PVAL018                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    THU_END_TIME 
+  ThuHours                            PVAL019                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    THU_HOURS 
+  FriStartTime                        PVAL020                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    FRI_START_TIME 
+  FriEndTime                          PVAL021                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    FRI_END_TIME 
+  FriHours                            PVAL022                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    FRI_HOURS 
+  SatStartTime                        PVAL023                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    SAT_START_TIME 
+  SatEndTime                          PVAL024                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    SAT_END_TIME 
+  SatHours                            PVAL025                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    SAT_HOURS 
+  SunStartTime                        PVAL026                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    SUN_START_TIME 
+  SunEndTime                          PVAL027                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    SUN_END_TIME 
+  SunHours                            PVAL028                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    SUN_HOURS 
+  TotalHours                          PVAL029                   (null)                 (null)                 Number       22      5 False     No              PER_WORKING_HOUR_PATTERNS_F    TOTAL_HOURS 
+  SourceSystemId                      PVAL030                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL031                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  GUID                                PVAL032                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  WorkDayDefId                        PVAL033                   (null)                 (null)                 Number       18 (null) False     No              PER_WORKING_HOUR_PATTERNS_F    WORK_DAY_DEF_ID 
+  WorkShiftType                       PVAL034                   (null)                 (null)                 String       30        False     No              PER_WORKING_HOUR_PATTERNS_F    WORK_SHIFT_TYPE 
+  WorkDayDefinitionCode               PVAL035                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  HourClockType                       java.lang.String       PER_WORKING_HOUR_PATTERNS_F    (null)                         ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_WORKING_HOUR_PATTERNS_F    OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  Assignment                          oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    ObjectId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.AssignmentVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    WorkingHourPatternId                   DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkingHourPatternHSDLLOVVO 
+                                           DLoadLOVDisplayAttributes        : [WorkingHourPatternId, AssignmentNumber] 
+                                           DLoadLOVReturnAttributes         : WorkingHourPatternId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.WorkingHourPatternDEO 
+     Table/View             : PER_WORKING_HOUR_PATTERNS_F 
+     Updateable             : True 
+     Integration Object Name: WorkingHourPattern 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_WORKING_HOUR_PATTERNS_F    HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  WorkingHourPatternId 
+  EffectiveStartDate 
+  EffectiveEndDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : WorkingHourPatternId 
+  Integration Object Name: WorkingHourPattern 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : ObjectId 
+  Integration Object Name: Assignment 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  Attribute Name         : WorkDayDefId 
+  Attribute Availability : Accepted 
+    Identified by        : Resolver VO 
+  Referenced Table/View  : HWM_WORK_DAY_DEF_VL 
+  Referenced Column      : WORK_DAY_DEF_ID 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  DefaultStartDay                WEEKDAY 
+  WorkShiftType                  ORA_WORK_SHIFT_TYPE 
+  WorkingHoursType               ORA_HOURS_TYPE 
+ 
+ 

@@ -1,0 +1,267 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : PersonEthnicity 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Person Ethnicity 
+  UI_DESCRIPTION             : A value that identifies the cultural or racial group to which the person belongs. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : PersonEthnicity 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonEthnicityVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkerEthnicity 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : Ethinicity 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+    ** CAT 1 FAIL : RGN-001: INCOMPATIBILITY - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  The shipping Flexfield support level DFF is no longer available. 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  EthnicityId                         PVAL001                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ETHNICITIES                ETHNICITY_ID 
+  PersonId                            PVAL002                   PVAL011                PVAL012                Number       18 (null) True      Yes             PER_ETHNICITIES                PERSON_ID 
+  PersonNumber                        PVAL_SECURE002            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LegislationCode                     PVAL004                   (null)                 (null)                 String       30        True      For new records PER_ETHNICITIES                LEGISLATION_CODE 
+  DeclarerId                          PVAL005                   PVAL013                PVAL014                Number       18 (null) False     No              PER_ETHNICITIES                DECLARER_ID 
+  DeclarerPersonNumber                PVAL_SECURE003            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  Ethnicity                           PVAL_SECURE001            (null)                 (null)                 String       30        False     No              PER_ETHNICITIES                ETHNICITY 
+  PrimaryFlag                         PVAL007                   (null)                 (null)                 String       30        True      For new records PER_ETHNICITIES                PRIMARY_FLAG 
+  SourceSystemOwner                   PVAL008                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL009                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  GUID                                PVAL010                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+    None found. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  BusinessGroupId                     java.lang.Long         PER_ETHNICITIES                BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_ETHNICITIES                OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  Worker                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  EthnicityDFF                        oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  PersonContact                       oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  Person                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmCommonSharedAM_YesNo             oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  HrLookup_Ethnicity                  oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    DeclarerId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.helper.PersonKeyHelperNDEVO 
+                                           DLoadLOVDisplayAttributes        : [PersonNumber] 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ETHNICITY_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    EthnicityId                            DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonEthnicityVO 
+                                           DLoadLOVDisplayAttributes        : [PersonId,LegislationCode,Ethnicity] 
+                                           DLoadLOVReturnAttributes         : EthnicityId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDCUSTOMVC__PER_MANAGE_PERSON_ETHNICITY_DATA__PER_ALL_PEOPLE_F__EthnicityEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.helper.PersonKeyHelperNDEVO 
+                                           DLoadLOVDisplayAttributes        : [PersonNumber] 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ETHNICITY_DATA__PER_ALL_PEOPLE_F__PersonDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.people.core.protectedModel.entity.EthnicityEO 
+     Table/View             : PER_ETHNICITIES 
+     Updateable             : True 
+     Integration Object Name: Ethinicity 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_ETHNICITIES                HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  EthnicityId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : EthnicityId 
+  Integration Object Name: Ethinicity 
+  User Keys 
+    [0] PersonNumber(secure), LegislationCode, Ethnicity(secure) 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+    [1] LegislationCode, Ethnicity(secure), PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    LegislationCode                PER_ETHNICITIES                LEGISLATION_CODE               Local EO 
+    Ethnicity                      PER_ETHNICITIES                ETHNICITY                      Local EO 
+    PersonId                       PER_ETHNICITIES                PERSON_ID                      Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : DeclarerId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : EO association usage + Referenced EO has IntegrationObjectName 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] DeclarerPersonNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    DeclarerPersonNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  Ethnicity                      PER_ETHNICITY 
+  PrimaryFlag                    YES_NO 
+ 
+ 

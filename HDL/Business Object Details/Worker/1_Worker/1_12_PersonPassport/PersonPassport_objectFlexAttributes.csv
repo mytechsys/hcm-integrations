@@ -1,0 +1,9 @@
+Name,METADATA Attribute,Required,Value Set Code,Category,Context,Description,Data Type,Length,Context Code
+"Place of Issue-Alternate Language","_ALTERNATE_ISSUE_PLACE(PER_PERSON_PASSPORT_LEG_DDF=AE)","No","HRC_CHAR_60","","United Arab Emirates","","String","60","AE"
+"Number of Accompanying Persons","_ACCOMPANYING_PERSONS(PER_PERSON_PASSPORT_LEG_DDF=AE)","No","HRX_AE_NUMBER_2","","United Arab Emirates","","Number","2","AE"
+"Number of Accompanying Persons","_ACCOMPANY_PERSON(PER_PERSON_PASSPORT_LEG_DDF=KW)","No","HRX_KW_NUM_14","","Kuwait","","Number","14","KW"
+"Name as in Passport","_NAME(PER_PERSON_PASSPORT_LEG_DDF=IN)","Yes","HRC_CHAR_120","","India","","String","120","IN"
+"Flexfield Context","FLEX:PER_PERSON_PASSPORT_LEG_DDF","Yes","","","United Arab Emirates","Supply the code of the flexfield context.","String","","AE"
+"Flexfield Context","FLEX:PER_PERSON_PASSPORT_LEG_DDF","Yes","","","India","Supply the code of the flexfield context.","String","","IN"
+"Flexfield Context","FLEX:PER_PERSON_PASSPORT_LEG_DDF","Yes","","","Kuwait","Supply the code of the flexfield context.","String","","KW"
+"ECNR Required","_ECNR_REQUIRED(PER_PERSON_PASSPORT_LEG_DDF=IN)","No","HRC_YES_NO","","India","","String","80","IN"

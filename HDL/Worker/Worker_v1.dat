@@ -1,0 +1,15 @@
+METADATA|Worker|EffectiveStartDate|EffectiveEndDate|PersonNumber|BloodType|CorrespondenceLanguage|StartDate|DateOfBirth|DateOfDeath|CountryOfBirth|RegionOfBirth|TownOfBirth|SourceSystemOwner|SourceSystemId|GUID|ActionCode|ReasonCode|PersonDuplicateCheck
+MERGE|Worker|2023/01/01|4712/12/31||B+|TH|2023/01/01|1990/01/01||US|Mexico|St Louis|HDL_LOAD|wkr_NEW_2023_001||HIRE||
+MERGE|Worker|2023/01/01|4712/12/31||B+|RU|2023/01/01|1990/01/02||US|Mexico|St Louis|HDL_LOAD|wkr_NEW_2023_002||HIRE||
+METADATA|PersonName|SourceSystemOwner|SourceSystemId|PersonId(SourceSystemId)|EffectiveStartDate|EffectiveEndDate|NameType|FirstName|LastName|LegislationCode
+MERGE|PersonName|HDL_LOAD|prn_NEW_2023_001|wkr_NEW_2023_001|2023/01/01|4712/12/31|GLOBAL|Dummy User 1|OraRed|US
+MERGE|PersonName|HDL_LOAD|prn_NEW_2023_002|wkr_NEW_2023_002|2023/01/01|4712/12/31|GLOBAL|Dummy User 2|OraRed|US
+METADATA|WorkRelationship|SourceSystemOwner|SourceSystemId|PersonId(SourceSystemId)|DateStart|WorkerType|LegalEmployerName|PrimaryFlag
+MERGE|WorkRelationship|HDL_LOAD|wrl_NEW_2023_001|wkr_NEW_2023_001|2023/01/01|E|US1 Legal Entity|Y
+MERGE|WorkRelationship|HDL_LOAD|wrl_NEW_2023_002|wkr_NEW_2023_002|2023/01/01|E|US1 Legal Entity|Y
+METADATA|WorkTerms|SourceSystemOwner|SourceSystemId|PeriodOfServiceId(SourceSystemId)|PersonId(SourceSystemId)|ActionCode|AssignmentStatusTypeCode|BusinessUnitShortCode|PrimaryWorkTermsFlag|EffectiveStartDate|EffectiveEndDate|EffectiveLatestChange|EffectiveSequence|JobCode|PositionCode|DepartmentName
+MERGE|WorkTerms|HDL_LOAD|wkt_NEW_2023_001|wrl_NEW_2023_001|wkr_NEW_2023_001|HIRE|ACTIVE_PROCESS|US1 Business Unit|Y|2023/01/01|4712/12/31|Y|1|JOB599|1263|TT Recruitment US
+MERGE|WorkTerms|HDL_LOAD|wkt_NEW_2023_002|wrl_NEW_2023_002|wkr_NEW_2023_002|HIRE|ACTIVE_PROCESS|US1 Business Unit|Y|2023/01/01|4712/12/31|Y|1|JOB599|1263|TT Recruitment US
+METADATA|Assignment|SourceSystemOwner|SourceSystemId|WorkTermsAssignmentId(SourceSystemId)|PersonId(SourceSystemId)|ActionCode|AssignmentStatusTypeCode|BusinessUnitShortCode|PersonTypeCode|PrimaryAssignmentFlag|EffectiveStartDate|EffectiveEndDate|EffectiveLatestChange|EffectiveSequence|JobCode|PositionCode|DepartmentName|LocationCode|FullPartTime|PermanentTemporary|RetirementAge|RetirementDate
+MERGE|Assignment|HDL_LOAD|assg_NEW_2023_001|wkt_NEW_2023_001|wkr_NEW_2023_001|HIRE|ACTIVE_PROCESS|US1 Business Unit|Employee|Y|2023/01/01|4712/12/31|Y|1|JOB599|1263|TT Recruitment US|US HQ|Full time|Regular||
+MERGE|Assignment|HDL_LOAD|assg_NEW_2023_002|wkt_NEW_2023_002|wkr_NEW_2023_002|HIRE|ACTIVE_PROCESS|US1 Business Unit|Employee|Y|2023/01/01|4712/12/31|Y|1|JOB599|1263|TT Recruitment US|US HQ|Full time|Regular||

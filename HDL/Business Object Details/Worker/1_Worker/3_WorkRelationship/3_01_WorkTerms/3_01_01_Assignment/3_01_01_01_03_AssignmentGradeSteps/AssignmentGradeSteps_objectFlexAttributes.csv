@@ -1,0 +1,3 @@
+Name,METADATA Attribute,Required,Value Set Code,Category,Context,Description,Data Type,Length,Context Code
+"Flexfield Context","FLEX:PER_ASG_GRADE_STEPS_LEG_DDF","Yes","","","US","Supply the code of the flexfield context.","String","","US"
+"Currency","_Currency(PER_ASG_GRADE_STEPS_LEG_DDF=US)","Yes","FND_FLEX_DEFAULT_FORMAT_ONLY_VARCHAR2_L1","","US","","String","1","US"

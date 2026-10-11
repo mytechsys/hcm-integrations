@@ -1,0 +1,500 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : WorkTerms 
+Version                 : V2 
+Hierarchy Level         : 3 
+Parent Discriminator    : WorkRelationship 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : ATT-003: TaxAddressId - The attribute name suggests a reference surrogate but it is not recognised as such - there is no registered integration object with this exact column name as its surrogate. 
+  CAT 1 FAIL : RGN-001: AdjustedFte - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 1 FAIL : RGN-001: AnnualWorkingDuration - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 1 FAIL : RGN-001: AnnualWorkingDurationUnits - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 1 FAIL : RGN-001: AnnualWorkingRatio - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 3 FAIL : OBJ-203: CategoryCode - This model mandatory attribute is HDL hidden. 
+  CAT 1 FAIL : RGN-001: StandardFrequencyDB - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 1 FAIL : RGN-001: StandardHours - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 1 FAIL : RGN-001: StdAnnualWorkingDuration - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no deprecate phase. 
+  CAT 3 FAIL : OBJ-204: LegalEntityId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this rejected attribute. 
+  CAT 2 FAIL : UKL-203: LegalEmployerName - PeriodOfServiceId - The local user key table and column combination are not found for security assessment in FND_TABLES, FND_COLUMNS: HR_ALL_ORGANIZATION_UNITS.NAME. 
+  CAT 2 FAIL : SKF-012: BusinessUnitId - This foreign integration reference has a conflicting association with an alternate surrogate column: oracle.apps.hcm.employment.core.publicModel.entity.association.BusinessUnitPEOToBaseWorkerAssignmentDEO - BU_ID 
+  CAT 2 FAIL : SKF-018: BusinessUnitId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 2 FAIL : SKF-018: OrganizationId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 2 FAIL : SKF-018: ProposedWorkerType - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name PersonType: [PersonType,V2,PersonType]. 
+  CAT 2 FAIL : SKF-018: UnionId - The shape of this foreign object reference user key does not match the user key of the object(s) loading the Integration Object Name Organization: [Organization,V2,Organization]. 
+  CAT 1 FAIL : LOV-001: AssignmentType - The HcmLookup attribute has a configuration problem - attribute definition has no HcmLookup specified. 
+  CAT 1 FAIL : LOV-001: BargainingUnitCode - The HcmLookup attribute has a configuration problem - attribute definition has no HcmLookup specified. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Employment Terms 
+  UI_DESCRIPTION             : Terms and conditions associated with one or more assignments in a work relationship. Customers not using the 3-Tier employment 
+                               model, and hence not using terms, will still have to supply terms metadata and merge lines. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : WorkTerms 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkTermsVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkTerms 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : Assignment 
+  Parent Object              : WorkRelationship 
+  Translation Object         : (null) 
+  Date Type                  : Multiple Changes Per Day 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : DFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  ActionCode                          PVAL001                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          ACTION_CODE 
+  AssignmentId                        PVAL002                   (null)                 (null)                 Number       18 (null) True      Yes             PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_ID 
+  AssignmentName                      PVAL003                   (null)                 (null)                 String       80        False     No              PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NAME 
+  AssignmentNumber                    PVAL004                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER 
+  AssignmentStatusTypeCode            PVAL005                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_STATUS_TYPE 
+  AssignmentStatusTypeId              PVAL006                   PVAL095                PVAL096                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_STATUS_TYPE_ID 
+  AssignmentType                      PVAL007                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_TYPE 
+  BargainingUnitCode                  PVAL008                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          BARGAINING_UNIT_CODE 
+  BillingTitle                        PVAL009                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          BILLING_TITLE 
+  BusinessUnitId                      PVAL010                   PVAL121                PVAL122                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          BUSINESS_UNIT_ID 
+  BusinessUnitShortCode               PVAL011                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+  CollectiveAgreementId               PVAL012                   PVAL115                PVAL116                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          COLLECTIVE_AGREEMENT_ID 
+  DateProbationEnd                    PDATE001                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          DATE_PROBATION_END 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_ALL_ASSIGNMENTS_M          EFFECTIVE_END_DATE 
+  EffectiveLatestChange               P_EFFECTIVE_LATEST_CHANGE (null)                 (null)                 String       30        True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_LATEST_CHANGE 
+  EffectiveSequence                   P_EFFECTIVE_SEQUENCE      (null)                 (null)                 Number        4 (null) True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_SEQUENCE 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_ALL_ASSIGNMENTS_M          EFFECTIVE_START_DATE 
+  WorkerCategory                      PVAL014                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EMPLOYEE_CATEGORY 
+  AssignmentCategory                  PVAL015                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EMPLOYMENT_CATEGORY 
+  EstablishmentId                     PVAL016                   PVAL107                PVAL108                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          ESTABLISHMENT_ID 
+  ReportingEstablishment              PVAL017                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  ExpenseCheckSendToAddress           PVAL018                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          EXPENSE_CHECK_ADDRESS 
+  GradeId                             PVAL019                   PVAL109                PVAL110                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          GRADE_ID 
+  GradeCode                           PVAL020                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  GradeLadderPgmId                    PVAL021                   PVAL105                PVAL106                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          GRADE_LADDER_PGM_ID 
+  GradeLadderPgmName                  PVAL022                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  HourlySalariedCode                  PVAL023                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          HOURLY_SALARIED_CODE 
+  InternalBuilding                    PVAL024                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_BUILDING 
+  InternalFloor                       PVAL025                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_FLOOR 
+  InternalLocation                    PVAL026                   (null)                 (null)                 String       80        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_LOCATION 
+  InternalMailstop                    PVAL027                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_MAILSTOP 
+  InternalOfficeNumber                PVAL028                   (null)                 (null)                 String       45        False     No              PER_ALL_ASSIGNMENTS_M          INTERNAL_OFFICE_NUMBER 
+  JobId                               PVAL029                   PVAL093                PVAL094                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          JOB_ID 
+  JobCode                             PVAL030                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LabourUnionMemberFlag               PVAL031                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          LABOUR_UNION_MEMBER_FLAG 
+  LocationId                          PVAL032                   PVAL111                PVAL112                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          LOCATION_ID 
+  LocationCode                        PVAL033                   (null)                 (null)                 String      150        False     No              (null)                         (null) 
+  ManagerFlag                         PVAL034                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          MANAGER_FLAG 
+  NormalHours                         PVAL035                   (null)                 (null)                 Number       22      3 False     No              PER_ALL_ASSIGNMENTS_M          NORMAL_HOURS 
+  Frequency                           PVAL036                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          FREQUENCY 
+  NoticePeriod                        PVAL037                   (null)                 (null)                 Number       10 (null) False     No              PER_ALL_ASSIGNMENTS_M          NOTICE_PERIOD 
+  NoticePeriodUOM                     PVAL038                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          NOTICE_PERIOD_UOM 
+  OrganizationId                      PVAL039                   PVAL099                PVAL100                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          ORGANIZATION_ID 
+  DepartmentName                      PVAL040                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  PeriodOfServiceId                   PVAL041                   PVAL089                PVAL090                Number       18 (null) True      Yes             PER_ALL_ASSIGNMENTS_M          PERIOD_OF_SERVICE_ID 
+  PersonId                            PVAL042                   PVAL091                PVAL092                Number       18 (null) True      For new records PER_ALL_ASSIGNMENTS_M          PERSON_ID 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  DateStart                           PDATE002                  (null)                 (null)                 Date                   False     No              (null)                         (null) 
+  WorkerType                          PVAL044                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  LegalEmployerName                   PVAL045                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  PersonTypeId                        PVAL046                   PVAL097                PVAL098                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          PERSON_TYPE_ID 
+  PersonTypeCode                      PVAL047                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  PositionId                          PVAL048                   PVAL113                PVAL114                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          POSITION_ID 
+  PositionCode                        PVAL049                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PositionOverrideFlag                PVAL050                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          POSITION_OVERRIDE_FLAG 
+  PrimaryWorkTermsFlag                PVAL051                   (null)                 (null)                 String       30        True      For new records PER_ALL_ASSIGNMENTS_M          PRIMARY_WORK_TERMS_FLAG 
+  ProbationPeriod                     PVAL052                   (null)                 (null)                 Number       25      5 False     No              PER_ALL_ASSIGNMENTS_M          PROBATION_PERIOD 
+  ProbationUnit                       PVAL053                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          PROBATION_UNIT 
+  ProjectedEndDate                    PDATE003                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          PROJECTED_ASSIGNMENT_END 
+  ProjectedStartDate                  PDATE004                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          PROJECTED_START_DATE 
+  ProposedWorkerType                  PVAL054                   PVAL117                PVAL118                String       30        False     No              PER_ALL_ASSIGNMENTS_M          PROPOSED_WORKER_TYPE 
+  ProposedUserPersonType              PVAL055                   (null)                 (null)                 String       80        False     No              (null)                         (null) 
+  ReasonCode                          PVAL056                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          REASON_CODE 
+  RetirementAge                       PVAL057                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          RETIREMENT_AGE 
+  RetirementDate                      PDATE005                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          RETIREMENT_DATE 
+  SpecialCeilingStepId                PVAL058                   PVAL101                PVAL102                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          SPECIAL_CEILING_STEP_ID 
+  SpecialCeilingStep                  PVAL059                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  StepEntryDate                       PDATE006                  (null)                 (null)                 Date                   False     No              PER_ALL_ASSIGNMENTS_M          STEP_ENTRY_DATE 
+  SystemPersonType                    PVAL060                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          SYSTEM_PERSON_TYPE 
+  TaxAddressId                        PVAL061                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          TAX_ADDRESS_ID 
+    ** CAT 2 FAIL : ATT-003: TaxAddressId - The attribute name suggests a reference surrogate but it is not recognised as such - there is no registered 
+                             integration object with this exact column name as its surrogate. 
+ 
+  EndTime                             PVAL062                   (null)                 (null)                 String        5        False     No              PER_ALL_ASSIGNMENTS_M          TIME_NORMAL_FINISH 
+  StartTime                           PVAL063                   (null)                 (null)                 String        5        False     No              PER_ALL_ASSIGNMENTS_M          TIME_NORMAL_START 
+  WorkAtHomeFlag                      PVAL065                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          WORK_AT_HOME 
+  FreezeStartDate                     PDATE007                  (null)                 (null)                 Date                   True      For new records PER_ALL_ASSIGNMENTS_M          FREEZE_START_DATE 
+  FreezeUntilDate                     PDATE008                  (null)                 (null)                 Date                   True      For new records PER_ALL_ASSIGNMENTS_M          FREEZE_UNTIL_DATE 
+  GUID                                PVAL068                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemOwner                   PVAL069                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  SourceSystemId                      PVAL070                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  TaxReportingUnitId                  PVAL072                   (null)                 (null)                 Number       18 (null) False     No              (null)                         (null) 
+  TaxReportingUnit                    PVAL073                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  PeopleGroup                         PVAL074                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  FullPartTime                        PVAL075                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          FULL_PART_TIME 
+  PermanentTemporary                  PVAL076                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          PERMANENT_TEMPORARY_FLAG 
+  CollectiveAgreementIdCode           PVAL077                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  DefaultExpenseAccount               PVAL078                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+  UnionId                             PVAL079                   PVAL119                PVAL120                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          UNION_ID 
+  UnionName                           PVAL080                   (null)                 (null)                 String      240        False     No              (null)                         (null) 
+  OvertimePeriodName                  PVAL081                   (null)                 (null)                 String   (null)        False     No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+  Deprecated Attributes 
+  --------------------- 
+  Attributes that are currently accepted but marked as deprecated and will be hidden in a future release. 
+ 
+    Attribute Name 
+    ----------------------------------- 
+    BillingTitle 
+    PersonId 
+    TaxReportingUnit 
+    TaxReportingUnitId 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AdjustedFte                         PVAL082                   (null)                 (null)                 Number       30     10 False     No              PER_ALL_ASSIGNMENTS_M          ADJUSTED_FTE 
+    ** CAT 1 FAIL : RGN-001: AdjustedFte - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no 
+                             deprecate phase. 
+ 
+  AnnualWorkingDuration               PVAL083                   (null)                 (null)                 Number        8      4 False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_DURATION 
+    ** CAT 1 FAIL : RGN-001: AnnualWorkingDuration - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with 
+                             no deprecate phase. 
+ 
+  AnnualWorkingDurationUnits          PVAL084                   (null)                 (null)                 String       20        False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_DURATION_UNITS 
+    ** CAT 1 FAIL : RGN-001: AnnualWorkingDurationUnits - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden 
+                             with no deprecate phase. 
+ 
+  AnnualWorkingRatio                  PVAL085                   (null)                 (null)                 Number        8      5 False     No              PER_ALL_ASSIGNMENTS_M          ANNUAL_WORKING_RATIO 
+    ** CAT 1 FAIL : RGN-001: AnnualWorkingRatio - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no 
+                             deprecate phase. 
+ 
+  CategoryCode                        PVAL071                   (null)                 (null)                 String       80        True      No              PER_ALL_ASSIGNMENTS_M          CATEGORY_CODE 
+    ** CAT 3 FAIL : OBJ-203: CategoryCode - This model mandatory attribute is HDL hidden. 
+ 
+  ContractId                          PVAL013                   PVAL103                PVAL104                Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          CONTRACT_ID 
+  StandardFrequencyDB                 PVAL086                   (null)                 (null)                 String       30        False     No              PER_ALL_ASSIGNMENTS_M          STANDARD_FREQUENCY 
+    ** CAT 1 FAIL : RGN-001: StandardFrequencyDB - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no 
+                             deprecate phase. 
+ 
+  StandardHours                       PVAL087                   (null)                 (null)                 Number       22      3 False     No              PER_ALL_ASSIGNMENTS_M          STANDARD_HOURS 
+    ** CAT 1 FAIL : RGN-001: StandardHours - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden with no 
+                             deprecate phase. 
+ 
+  StdAnnualWorkingDuration            PVAL088                   (null)                 (null)                 Number        8      4 False     No              PER_ALL_ASSIGNMENTS_M          STD_ANNUAL_WORKING_DURATION 
+    ** CAT 1 FAIL : RGN-001: StdAnnualWorkingDuration - REGRESSION - QA_HCM_PREARU_MOBILE_230301.1238.S (23B):  This shipping visible attribute is now hidden 
+                             with no deprecate phase. 
+ 
+  VendorId                            PVAL067                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          VENDOR_ID 
+  VendorSiteId                        PVAL064                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          VENDOR_SITE_ID 
+  WorkTermsAssignmentId               PVAL066                   (null)                 (null)                 Number       18 (null) False     No              PER_ALL_ASSIGNMENTS_M          WORK_TERMS_ASSIGNMENT_ID 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  ActionOccurrenceId                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          ACTION_OCCURRENCE_ID           ___SDO_HIDDEN 
+  ActionOccurrenceIdPopulatedFlag     java.lang.String       PER_ALL_ASSIGNMENTS_M          (null)                         ___SDO_HIDDEN 
+  ApplicantRank                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          APPLICANT_RANK                 ___SDO_HIDDEN___READONLY 
+  AssignmentSequence                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_SEQUENCE            ___SDO_HIDDEN 
+  AutoEndFlag                         java.lang.String       PER_ALL_ASSIGNMENTS_M          AUTO_END_FLAG                  ___SDO_HIDDEN 
+  BusinessGroupId                     java.lang.Long         PER_ALL_ASSIGNMENTS_M          BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  CagrGradeDefId                      java.lang.Long         PER_ALL_ASSIGNMENTS_M          CAGR_GRADE_DEF_ID              ___SDO_HIDDEN 
+  CagrIdFlexNum                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          CAGR_ID_FLEX_NUM               ___SDO_HIDDEN 
+  DefaultCodeCombId                   java.lang.Long         PER_ALL_ASSIGNMENTS_M          DEFAULT_CODE_COMB_ID           ___SDO_HIDDEN 
+  DutiesType                          java.lang.String       PER_ALL_ASSIGNMENTS_M          DUTIES_TYPE                    ___SDO_HIDDEN 
+  IdFlexNum                           java.lang.Long         PER_ALL_ASSIGNMENTS_M          ID_FLEX_NUM                    ___SDO_HIDDEN 
+  JobPostSourceName                   java.lang.String       PER_ALL_ASSIGNMENTS_M          JOB_POST_SOURCE_NAME           ___SDO_HIDDEN 
+  LegislationCode                     java.lang.String       PER_ALL_ASSIGNMENTS_M          LEGISLATION_CODE               ___SDO_HIDDEN 
+  LinkageType                         java.lang.String       PER_ALL_ASSIGNMENTS_M          LINKAGE_TYPE                   ___SDO_HIDDEN 
+  ParentAssignmentId                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          PARENT_ASSIGNMENT_ID           ___SDO_HIDDEN 
+  PeopleGroupId                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          PEOPLE_GROUP_ID                ___SDO_HIDDEN 
+  PersonReferredById                  java.lang.Long         PER_ALL_ASSIGNMENTS_M          PERSON_REFERRED_BY_ID          ___SDO_HIDDEN___READONLY 
+  PostingContentId                    java.lang.Long         PER_ALL_ASSIGNMENTS_M          POSTING_CONTENT_ID             ___SDO_HIDDEN 
+  PrimaryAssignmentFlag               java.lang.String       PER_ALL_ASSIGNMENTS_M          PRIMARY_ASSIGNMENT_FLAG        ___SDO_HIDDEN 
+  PrimaryFlag                         java.lang.String       PER_ALL_ASSIGNMENTS_M          PRIMARY_FLAG                   ___SDO_HIDDEN 
+  PrimaryWorkRelationFlag             java.lang.String       PER_ALL_ASSIGNMENTS_M          PRIMARY_WORK_RELATION_FLAG     ___SDO_HIDDEN 
+  ProjectTitle                        java.lang.String       PER_ALL_ASSIGNMENTS_M          PROJECT_TITLE                  ___SDO_HIDDEN 
+  RecordCreator                       java.lang.String       PER_ALL_ASSIGNMENTS_M          RECORD_CREATOR                 ___SDO_HIDDEN 
+  RecruiterId                         java.lang.Long         PER_ALL_ASSIGNMENTS_M          RECRUITER_ID                   ___SDO_HIDDEN___READONLY 
+  RecruitmentActivityId               java.lang.Long         PER_ALL_ASSIGNMENTS_M          RECRUITMENT_ACTIVITY_ID        ___SDO_HIDDEN___READONLY 
+  SalReviewPeriod                     java.lang.Long         PER_ALL_ASSIGNMENTS_M          SAL_REVIEW_PERIOD              ___SDO_HIDDEN 
+  SalReviewPeriodFrequency            java.lang.String       PER_ALL_ASSIGNMENTS_M          SAL_REVIEW_PERIOD_FREQUENCY    ___SDO_HIDDEN 
+  SetOfBooksId                        java.lang.Long         PER_ALL_ASSIGNMENTS_M          SET_OF_BOOKS_ID                ___SDO_HIDDEN 
+  SkipDefaultingFlag                  java.lang.Boolean      PER_ALL_ASSIGNMENTS_M          (null)                         ___SDO_HIDDEN 
+  SoftCodingKeyflexId                 java.lang.Long         PER_ALL_ASSIGNMENTS_M          SOFT_CODING_KEYFLEX_ID         ___SDO_HIDDEN 
+  SourceOrganizationId                java.lang.Long         PER_ALL_ASSIGNMENTS_M          SOURCE_ORGANIZATION_ID         ___SDO_HIDDEN___READONLY 
+  SourceType                          java.lang.String       PER_ALL_ASSIGNMENTS_M          SOURCE_TYPE                    ___SDO_HIDDEN 
+  VacancyId                           java.lang.Long         PER_ALL_ASSIGNMENTS_M          VACANCY_ID                     ___SDO_HIDDEN___READONLY 
+  VendorAssignmentNumber              java.lang.String       PER_ALL_ASSIGNMENTS_M          VENDOR_ASSIGNMENT_NUMBER       ___SDO_HIDDEN 
+  VendorEmployeeNumber                java.lang.String       PER_ALL_ASSIGNMENTS_M          VENDOR_EMPLOYEE_NUMBER         ___SDO_HIDDEN 
+  DfltIdFlexNum                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  LegalEntityId                       java.lang.Long         PER_ALL_ASSIGNMENTS_M          LEGAL_ENTITY_ID                ___SDO_HIDDEN 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  ObjectVersionNumber                 java.lang.Integer      PER_ALL_ASSIGNMENTS_M          OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeStartSequence                  java.lang.Integer      (null)                         (null)                         ___in_ATTR_TRANSIENT_list___UnknownAttributeSQLType:INTEGER 
+  RangeEndSequence                    java.lang.Integer      (null)                         (null)                         ___in_ATTR_TRANSIENT_list___UnknownAttributeSQLType:INTEGER 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  LocationSetId                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  JobSetId                            java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  GradeSetId                          java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  SeniorityBasis                      java.lang.String       PER_ALL_ASSIGNMENTS_M          SENIORITY_BASIS                ___SDO_HIDDEN 
+  OvertimePeriod                      java.lang.Long         PER_ALL_ASSIGNMENTS_M          OVERTIME_PERIOD                ___SDO_HIDDEN 
+  OvertimePeriodCode                  java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  RequisitionNumber                   java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  RequisitionId                       java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  CandidateNumber                     java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  OfferId                             java.lang.Long         (null)                         (null)                         ___SDO_HIDDEN 
+  Assignment                          oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  Contract                            oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkTermsSupervisor                 oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkTermsWorkMeasure                oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkTermsGradeSteps                 oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  BaseWorkerAsgDFF                    oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  BaseWorkerAsgLegDDF                 oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  Account                             oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  WorkTermsPeopleGroup                oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  j_AssignmentEitCategoryWT           oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmLookupPVO                        oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  HcmCommonSharedAM_PerPeriodTypeLookup oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  HcmCommonSharedAM_PerSeniorityCalcBasis oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  EmpCatLookup                        oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  EmployeeCatgLookup                  oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  FrequencyLookup                     oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  HourlySalariedCodeLookup            oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  QualifyingUnitsLookup               oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  PerWorkerAddressTypeLookup          oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  PerPartTimeorFullTime               oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  PerRegularorTemporary               oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  AnnualFrequencyLookup               oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkTermsVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_ALL_ASSIGNMENTS_M__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    BargainingUnitCode                     DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.BargainingUnitLookupHSDLLOV 
+                                           DLoadLOVDisplayAttributes        : [Meaning,Tag] 
+                                           DLoadLOVReturnAttributes         : Meaning 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    BusinessUnitId                         DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.financials.commonModules.businessUnits.publicView.BusinessUnitPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : BusinessUnitId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_BUSINESS_UNIT_ORGANIZATION_DATA__HR_ALL_ORGANIZATION_UNITS_F__BusinessUnitPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    CollectiveAgreementId                  DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.collectiveAgreements.publicView.CollectiveAgreementDPVO 
+                                           DLoadLOVDisplayAttributes        : IdentificationCode 
+                                           DLoadLOVReturnAttributes         : CollectiveAgreementId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    GradeId                                DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.grades.publicView.GradePVO 
+                                           DLoadLOVDisplayAttributes        : GradeCode 
+                                           DLoadLOVReturnAttributes         : GradeId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    JobId                                  DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.jobs.publicView.JobPVO 
+                                           DLoadLOVDisplayAttributes        : JobCode 
+                                           DLoadLOVReturnAttributes         : JobId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    LegalEntityId                          DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.LegalEmployerLOVPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+      ** CAT 3 FAIL : OBJ-204: LegalEntityId - Remove the [DLoadLOVViewDefName, DLoadLOVDisplayAttributes, DLoadLOVReturnAttributes] property from this rejected 
+                               attribute. 
+ 
+    LocationId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.locations.publicView.LocationLovPVO 
+                                           DLoadLOVDisplayAttributes        : LocationCode 
+                                           DLoadLOVReturnAttributes         : LocationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    OrganizationId                         DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.DepartmentPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_DEPARTMENT_DATA__HR_ALL_ORGANIZATION_UNITS_F__DepartmentDPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PeriodOfServiceId                      DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkRelationshipVO 
+                                           DLoadLOVDisplayAttributes        : [PeriodOfServiceId, PersonId, DateStart, WorkerType, LegalEntityId] 
+                                           DLoadLOVReturnAttributes         : PeriodOfServiceId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORK_RELATIONSHIP_DATA__PER_ALL_PEOPLE_F__PeriodOfServiceEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonWorkRelationshipHSDLLOVVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_PERSON_ASSIGNMENT_DATA__PER_PERIODS_OF_SERVICE__PeriodOfServiceEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonTypeId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.people.setup.publicView.PersonTypePVO 
+                                           DLoadLOVDisplayAttributes        : UserPersonType 
+                                           DLoadLOVReturnAttributes         : PersonTypeId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_PERSON_TYPE_DATA__PER_PERSON_TYPES__PersonTypePEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PositionId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.workStructures.positions.publicView.PositionPVO 
+                                           DLoadLOVDisplayAttributes        : PositionCode 
+                                           DLoadLOVReturnAttributes         : PositionId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_POSITION_DATA__HR_ALL_POSITIONS_F__PositionDPEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ProposedWorkerType                     DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.people.setup.publicView.PersonTypePVO 
+                                           DLoadLOVDisplayAttributes        : UserPersonType 
+                                           DLoadLOVReturnAttributes         : PersonTypeId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_CHOOSE_PERSON_TYPE_DATA__PER_PERSON_TYPES__PersonTypePEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    TaxReportingUnitId                     DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.organizations.publicView.TaxReportingUnitPVO 
+                                           DLoadLOVDisplayAttributes        : Name 
+                                           DLoadLOVReturnAttributes         : OrganizationId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : null 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.BaseWorkerAssignmentDEO 
+     Table/View             : PER_ALL_ASSIGNMENTS_M 
+     Updateable             : True 
+     Integration Object Name: Assignment 
+ 
+  2. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.AssignmentDEO 
+     Table/View             : PER_ALL_ASSIGNMENTS_M 
+     Updateable             : True 

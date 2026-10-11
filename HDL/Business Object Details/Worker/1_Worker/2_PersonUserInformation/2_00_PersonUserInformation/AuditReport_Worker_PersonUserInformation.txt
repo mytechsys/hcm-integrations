@@ -1,0 +1,227 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : PersonUserInformation 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : Worker 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : UKL-205: UserName - PersonUserInformationId - The source table and column for the local user key attribute cannot be identified - transient component. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : User Information 
+  UI_DESCRIPTION             : The user account of a new hire. Update the user information in the User object. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : PersonUserInformation 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : CREATE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonUserInformationVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : WorkerUserInformation 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : null (transient) 
+  Parent Object              : Worker 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  PersonUserInformationId             PVAL001                   (null)                 (null)                 Number       18 (null) n/a       Yes             (null)                         (null) 
+  PersonId                            PVAL002                   PVAL013                PVAL014                Number       18 (null) n/a       Yes             (null)                         (null) 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+  StartDate                           PDATE001                  (null)                 (null)                 Date                   n/a       No              (null)                         (null) 
+  UserGUID                            PVAL004                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  UserName                            PVAL005                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  SendCredentialsEmailFlag            PVAL006                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  CredentialsEmailAddress             PVAL007                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  GeneratedUserAccountFlag            PVAL008                   (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+  UsernameMatchingFlag                PVAL009                   (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+  EmailAddress                        PVAL010                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  EmailMatchingFlag                   PVAL011                   (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+  CreateUserIfNoMatchingEmailFlag     PVAL012                   (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    PersonId                            n/a       Yes             Parent surrogate key is mandatory. 
+    PersonUserInformationId             n/a       Yes             Primary key attribute is mandatory. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  Worker                              oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  PersonUserManualRoles               oracle.jbo.RowIterator n/a                            n/a                            ___ATTR_ASSOCIATED_ROWITERATOR___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmCommonSharedAM_YesNo             oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+  No LOV detail annotations found. 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  None found. 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  None found. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  PersonUserInformationId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : PersonUserInformationId 
+  Integration Object Name: null 
+  User Keys 
+    [0] PersonNumber(secure), UserName 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002 
+    [1] UserName, PersonId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL001, UKVAL002 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    UserName                       (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: UserName - PersonUserInformationId - The source table and column for the local user key attribute cannot be identified - 
+                               transient component. 
+ 
+    PersonId                       (null)                         (null)                         (null) 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : PersonId 
+  Integration Object Name: Person 
+  User Keys 
+    [0] PersonNumber(secure) 
+    UK Stage [0] UKVAL_SECURE001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  None found. 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  CreateUserIfNoMatchingEmailFlag YES_NO 
+  EmailMatchingFlag              YES_NO 
+  GeneratedUserAccountFlag       YES_NO 
+  UsernameMatchingFlag           YES_NO 
+ 
+ 

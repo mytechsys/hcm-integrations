@@ -1,0 +1,297 @@
+================================================================================================================================= 
+Hierarchy Discriminator : Worker 
+Object Discriminator    : Contract 
+Version                 : V2 
+Hierarchy Level         : 4 
+Parent Discriminator    : WorkTerms 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 1 FAIL : SKP-002: AssignmentId - The non-transient parent surrogate ID attribute is not defined as ADF mandatory. 
+  CAT 1 FAIL : LOV-001: ContractType - The HcmLookup attribute has a configuration problem - A different lookup type is specified by a HcmCommonSharedAM usage: YES_NO. 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Contract 
+  UI_DESCRIPTION             : The contract details that are associated with employment terms or assignments. 
+  BUS_OBJ_TOP_DISCRIMINATOR  : Worker 
+  BUS_OBJ_FILE_DISCRIMINATOR : Contract 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.employment.core.workerServiceV2.view.ContractVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : Contract 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : Yes 
+  Security Classification    : YS ** certified secured object 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : Contract 
+  Parent Object              : WorkTerms 
+  Translation Object         : (null) 
+  Date Type                  : Date-effective 
+  Adjust Logical Start Date  : No 
+  Adjust Logical End Date    : No 
+  User Key DE Override       : No 
+  Flexfield support          : DFF 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AssignmentId                        PVAL001                   PVAL017                PVAL018                Number       18 (null) False     Yes             PER_CONTRACTS_F                ASSIGNMENT_ID 
+  ContractId                          PVAL002                   (null)                 (null)                 Number       18 (null) True      Yes             PER_CONTRACTS_F                CONTRACT_ID 
+  ContractType                        PVAL003                   (null)                 (null)                 String       30        False     No              PER_CONTRACTS_F                TYPE 
+  Description                         PVAL004                   (null)                 (null)                 String     2000        False     No              PER_CONTRACTS_F                DESCRIPTION 
+  Duration                            PVAL005                   (null)                 (null)                 Number       25      5 False     No              PER_CONTRACTS_F                DURATION 
+  DurationUnits                       PVAL006                   (null)                 (null)                 String       30        False     No              PER_CONTRACTS_F                DURATION_UNITS 
+  EffectiveStartDate                  P_EFFECTIVE_START_DATE    (null)                 (null)                 Date                   True      Yes             PER_CONTRACTS_F                EFFECTIVE_START_DATE 
+  EffectiveEndDate                    P_EFFECTIVE_END_DATE      (null)                 (null)                 Date                   True      No              PER_CONTRACTS_F                EFFECTIVE_END_DATE 
+  ExtensionPeriod                     PVAL007                   (null)                 (null)                 Number       25      5 False     No              PER_CONTRACTS_F                EXTENSION_PERIOD 
+  ExtensionPeriodUnits                PVAL008                   (null)                 (null)                 String       30        False     No              PER_CONTRACTS_F                EXTENSION_PERIOD_UNITS 
+  ExtensionReason                     PVAL009                   (null)                 (null)                 String       80        False     No              PER_CONTRACTS_F                EXTENSION_REASON 
+  PersonId                            PVAL010                   PVAL019                PVAL020                Number       18 (null) True      For new records PER_CONTRACTS_F                PERSON_ID 
+  AssignmentNumber                    PVAL011                   (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        False     No              (null)                         (null) 
+  GUID                                PVAL013                   (null)                 (null)                 String       32        False     No              HRC_INTEGRATION_KEY_MAP        GUID 
+  SourceSystemId                      PVAL014                   (null)                 (null)                 String     2000        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_ID 
+  SourceSystemOwner                   PVAL015                   (null)                 (null)                 String       30        False     No              HRC_INTEGRATION_KEY_MAP        SOURCE_SYSTEM_OWNER 
+  ContractNumber                      PVAL016                   (null)                 (null)                 String       30        False     No              PER_CONTRACTS_F                CONTRACT_NUMBER 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    AssignmentId                        False     Yes             Parent surrogate key is mandatory. 
+    EffectiveEndDate                    True      No              EffectiveEndDate is defaulted to the end of time by HDL when not supplied. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+  None found. 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  BusinessGroupId                     java.lang.Long         PER_CONTRACTS_F                BUSINESS_GROUP_ID              ___SDO_HIDDEN 
+  ContractualJobTitle                 java.lang.String       PER_CONTRACTS_F                CONTRACTUAL_JOB_TITLE          ___SDO_HIDDEN 
+  DocStatus                           java.lang.String       PER_CONTRACTS_F                DOC_STATUS                     ___SDO_HIDDEN 
+  DocStatusChangeDate                 java.sql.Date          PER_CONTRACTS_F                DOC_STATUS_CHANGE_DATE         ___SDO_HIDDEN 
+  EndReason                           java.lang.String       PER_CONTRACTS_F                END_REASON                     ___SDO_HIDDEN 
+  NumberOfExtensions                  java.lang.Integer      PER_CONTRACTS_F                NUMBER_OF_EXTENSIONS           ___SDO_HIDDEN 
+  ObjectVersionNumber                 java.lang.Integer      PER_CONTRACTS_F                OBJECT_VERSION_NUMBER          ___HISTORY_NOT_DEFINED___EO_HISTORY_NOT_DEFINED___READONLY 
+  Parties                             java.lang.String       PER_CONTRACTS_F                PARTIES                        ___SDO_HIDDEN 
+  Reference                           java.lang.String       PER_CONTRACTS_F                REFERENCE                      ___SDO_HIDDEN 
+  StartReason                         java.lang.String       PER_CONTRACTS_F                START_REASON                   ___SDO_HIDDEN 
+  Status                              java.lang.String       PER_CONTRACTS_F                STATUS                         ___SDO_HIDDEN 
+  StatusReason                        java.lang.String       PER_CONTRACTS_F                STATUS_REASON                  ___SDO_HIDDEN 
+  WorkTermsType                       java.lang.String       PER_CONTRACTS_F                WORK_TERMS_TYPE                ___SDO_HIDDEN 
+  SysEffectiveDate                    java.sql.Date          (null)                         (null)                         ___SDO_HIDDEN___in_ATTR_TRANSIENT_list 
+  RangeStartDate                      java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeEndDate                        java.sql.Date          (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  RangeMode                           java.lang.String       (null)                         (null)                         ___in_ATTR_TRANSIENT_list 
+  LegislationCode                     java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+  ContractDFF                         oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  ContractLegDDF                      oracle.jbo.Row         n/a                            n/a                            ___ATTR_ASSOCIATED_ROW___READONLY___UnknownAttributeSQLType:LONGVARCHAR 
+  HcmCommonSharedAM_PerContractTypeLookup oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+  QualifyingUnitsVO                   oracle.jbo.RowSet      n/a                            n/a                            ___ATTR_ROWSET 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+    Attribute Name                         LOV Annotation Set 
+    -------------------------------------- ----------------------------------------------------------------------------------------------------------------------------- 
+    AssignmentId                           DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.WorkTermsVO 
+                                           DLoadLOVDisplayAttributes        : AssignmentNumber 
+                                           DLoadLOVReturnAttributes         : AssignmentId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORKER_CONTRACT_DATA__PER_CONTRACTS_F__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    ContractId                             DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.ContractVO 
+                                           DLoadLOVDisplayAttributes        : [ContractId, AssignmentId] 
+                                           DLoadLOVReturnAttributes         : ContractId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORKER_CONTRACT_DATA__PER_CONTRACTS_F__ContractDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+    PersonId                               DLoadLOVListType                 : null 
+                                           DLoadLOVViewDefName              : oracle.apps.hcm.employment.core.workerServiceV2.view.PersonAssignmentsHSDLLOVVO 
+                                           DLoadLOVDisplayAttributes        : PersonNumber 
+                                           DLoadLOVReturnAttributes         : PersonId 
+                                           DLoadLOVListViewCriteria         : null 
+                                           DLoadLOVListSecurityViewCriteria : FNDDS__PER_MANAGE_WORKER_CONTRACT_DATA__PER_CONTRACTS_F__BaseWorkerAssignmentDEO 
+                                           DLoadLOVListQueryCriteria        : null 
+                                           DLoadLOVListQueryBindMap         : null 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  1. Entity Object          : oracle.apps.hcm.employment.core.publicModel.entity.ContractDEO 
+     Table/View             : PER_CONTRACTS_F 
+     Updateable             : True 
+     Integration Object Name: Contract 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  Table Name                     Identified By 
+  ------------------------------ ---------------------------------------- 
+  PER_CONTRACTS_F                HDL derivation. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  ContractId 
+  EffectiveStartDate 
+  EffectiveEndDate 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : ContractId 
+  Integration Object Name: Contract 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+    [1] AssignmentId   - HDL added index to enable a surrogate user key reference in HCM Spreadsheet Loader 
+    UK Stage [1] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+    AssignmentId                   PER_CONTRACTS_F                ASSIGNMENT_ID                  Local EO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : AssignmentId 
+  Integration Object Name: Assignment 
+    ** CAT 1 FAIL : SKP-002: AssignmentId - The non-transient parent surrogate ID attribute is not defined as ADF mandatory. 
+ 
+  User Keys 
+    [0] AssignmentNumber 
+    UK Stage [0] UKVAL001 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    AssignmentNumber               PER_ALL_ASSIGNMENTS_M          ASSIGNMENT_NUMBER              Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId] + HRC_INTEGRATION_OBJECTS registry entry for table and column 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] PersonNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    PersonNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  None found. 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  Attribute Name                 Lookup Type 
+  ------------------------------ ------------------------------ 
+  ContractType                   CONTRACT_TYPE 
+    ** CAT 1 FAIL : LOV-001: ContractType - The HcmLookup attribute has a configuration problem - A different lookup type is specified by a HcmCommonSharedAM 
+                             usage: YES_NO. 
+ 
+  DurationUnits                  QUALIFYING_UNITS 
+  ExtensionPeriodUnits           QUALIFYING_UNITS 
+ 
+ 
