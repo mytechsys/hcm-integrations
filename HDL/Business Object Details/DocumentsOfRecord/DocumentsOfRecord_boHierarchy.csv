@@ -1,0 +1,3 @@
+Name,File Discriminator,Description,Supported Actions,Date Effectivity,Required for New Records,Parent Object
+"Document Record","DocumentsOfRecord","Stores information about person documents such as visas, licenses, and medical certificates, and can include electronic versions of the documents as attachments.","Create, update and delete","None","Yes",""
+"Document Record Attachment","DocumentAttachment","Electronic versions of person documents can be included as attachments to document records","Create, update and delete","None","No","Document Record"

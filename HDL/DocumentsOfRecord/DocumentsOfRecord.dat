@@ -1,0 +1,7 @@
+METADATA|DocumentsOfRecord|DocumentsOfRecordId|DocumentName|DocumentNumber|DocumentCode|PersonId(SourceSystemId)|PersonNumber|DocumentTypeId|DocumentType|Country|DateFrom|DateTo|IssuingAuthority|IssuedDate|IssuingCountry|IssuingLocation|Comments|Publish|PublishDate|GUID|SourceSystemOwner|SourceSystemId|IssuingCountryName|AssignmentId|AssignmentNumber|TagList
+MERGE|DocumentsOfRecord||Degree Certificate|||SYS2_wkr_NEW_2026_001|||Degree or Certificate||2026/01/01||University of Jordan|2020/01/01|US|Jordan|Employee College Degree|Y|2020/01/01||HDL_LOAD|SYS2_doc_rec_NEW_2026_001|United States|||
+MERGE|DocumentsOfRecord||Visa H1B|VISA0001||SYS2_wkr_NEW_2026_002|||Visa for Embassy||2026/01/01||US Embassy, India|2020/01/01|US|California|Employee H1B Visa|Y|2020/01/01||HDL_LOAD|SYS2_doc_rec_NEW_2026_002|United States|||
+
+METADATA|DocumentAttachment|AttachedDocumentId|Title|File|FileName|Description|DataTypeCode|URL|MimeType|DocumentsOfRecordId(SourceSystemId)|DocumentCode|PersonId(SourceSystemId)|PersonNumber|DocumentTypeId|DocumentType|Country|DmDocumentId|DmVersonNumber|URLorTextorFileName|SourceSystemOwner|SourceSystemId
+MERGE|DocumentAttachment||Degree|OD000001.pdf|CollegeDegree||FILE|||SYS2_doc_rec_NEW_2026_001||SYS2_wkr_NEW_2026_001|||Degree or Certificate||||OD000001.pdf|HDL_LOAD|SYS2_doc_att_NEW_2026_001
+MERGE|DocumentAttachment||Visa|VISA0001.pdf|USVisa||FILE|||SYS2_doc_rec_NEW_2026_002||SYS2_wkr_NEW_2026_002|||Visa for Embassy||||VISA0001.pdf|HDL_LOAD|SYS2_doc_att_NEW_2026_002

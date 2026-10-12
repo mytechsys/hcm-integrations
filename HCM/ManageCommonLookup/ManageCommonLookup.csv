@@ -20,3 +20,4 @@ Manage Common Lookups,NATIONALITY,Legislation Code,
 Manage Common Lookups,PER_CITIZENSHIP_STATUS,Citizenship Status,
 Manage Common Lookups,PER_PASSPORT_TYPE,Passport Type,
 Manage Common Lookups,ADDRESS_TYPE,Address Type,
+Manage Common Lookups,PER_ETHNICITY,Ethnicity,PersonEthnicity

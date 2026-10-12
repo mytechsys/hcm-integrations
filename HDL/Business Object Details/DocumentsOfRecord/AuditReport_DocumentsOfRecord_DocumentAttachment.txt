@@ -1,0 +1,271 @@
+================================================================================================================================= 
+Hierarchy Discriminator : DocumentsOfRecord 
+Object Discriminator    : DocumentAttachment 
+Version                 : V2 
+Hierarchy Level         : 2 
+Parent Discriminator    : DocumentsOfRecord 
+ 
+ 
+Failure Summary 
+=============== 
+A summary of the errors and warnings raised for this object. 
+ 
+  CAT 2 FAIL : UKL-205: DataTypeCode - AttachedDocumentId - The source table and column for the local user key attribute cannot be identified - transient component. 
+  CAT 2 FAIL : UKL-105: DataTypeCode - AttachedDocumentId - The user key attribute is not defined on the resolver VO: oracle.apps.fnd.applcore.attachments.uiModel.view.AttachmentsVO 
+ 
+ 
+Object Registration 
+=================== 
+Information registered in the HRC_DL_BUSINESS_OBJECTS and HRC_DL_UI_BUS_OBJECTS_TL tables 
+ 
+  UI_NAME                    : Document Record Attachment 
+  UI_DESCRIPTION             : Electronic versions of person documents can be included as attachments to document records 
+  BUS_OBJ_TOP_DISCRIMINATOR  : DocumentsOfRecord 
+  BUS_OBJ_FILE_DISCRIMINATOR : DocumentAttachment 
+  PROCESSING_ORDER           : (null) 
+  VALID_OPERATIONS           : MERGE_DELETE 
+  PRODUCT_AREA               : (null) 
+  BUSINESS_OBJECT_VO_FQ_NAME : oracle.apps.hcm.documentsOfRecord.core.documentRecordServiceV2.view.DocumentAttachmentVO 
+  BUS_OBJ_SERVICE_VERSION    : V2 
+  USING_APP_FQ_NAME          : (null) 
+  USING_APP_CONFIG           : (null) 
+  USING_APP_VIEWUSAGE_NAME   : DocumentAttachment 
+  WS_CONNECTION_QNAME        : (null) 
+  CALLBACK_CONNECTION_QNAME  : (null) 
+  GROUP_BY_EXPRESSION        : (null) 
+  ORDER_BY_EXPRESSION        : (null) 
+  CUSTOM_ORDERING_PROCEDURE  : (null) 
+  POST_PROC_TYPE             : (null) 
+  POST_PROC_JOB_FQ_DEFN_NAME : (null) 
+  POST_PROC_JOB_FQ_CLASS_NAME: (null) 
+  POST_PROC_TASK_NAMES       : (null) 
+  VALIDATION_ENABLED         : (null) 
+  ROLLBACK_ENABLED           : (null) 
+ 
+ 
+Object Certification 
+==================== 
+Objects must be audited and certified before they are visible on customer environments. 
+ 
+  HDL Enabled                : Yes 
+  HSDL Enabled               : No ** This object is not certified for HSDL use and won't be available on customer environments. 
+  Security Classification    : No ** The data security classification for this object is unknown so spreadsheets based on this object cannot be shared with 
+                               business users for bulk loading. 
+  Rollback Enabled           : No (null) 
+ 
+ 
+Object Derived Information 
+========================== 
+Information derived from the object registered. 
+ 
+  Integration Object Name    : null (transient) 
+  Parent Object              : DocumentsOfRecord 
+  Translation Object         : (null) 
+  Date Type                  : None 
+  Adjust Logical Start Date  : n/a 
+  Adjust Logical End Date    : n/a 
+  User Key DE Override       : n/a 
+  Flexfield support          : NONE 
+ 
+ 
+Accepted Attributes 
+=================== 
+Attributes HCM Data Loader will expose for customer usage. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  AttachedDocumentId                  PVAL001                   (null)                 (null)                 Number       18 (null) n/a       Yes             (null)                         (null) 
+  Title                               PVAL002                   (null)                 (null)                 String       80        n/a       No              (null)                         (null) 
+  File                                PVAL003                   (null)                 (null)                 Blob     (null)        n/a       No              (null)                         (null) 
+  FileName                            PVAL004                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  Description                         PVAL005                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  DataTypeCode                        PVAL006                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  URL                                 PVAL007                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  MimeType                            PVAL008                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  DocumentsOfRecordId                 PVAL009                   PVAL020                PVAL021                Number       18 (null) n/a       Yes             (null)                         (null) 
+  DocumentCode                        PVAL010                   (null)                 (null)                 String      150        n/a       No              (null)                         (null) 
+  PersonId                            PVAL011                   PVAL022                PVAL023                Number       18 (null) n/a       No              (null)                         (null) 
+  PersonNumber                        PVAL_SECURE001            (null)                 (null)                 String       30        n/a       No              (null)                         (null) 
+  DocumentTypeId                      PVAL013                   PVAL024                PVAL025                Number       18 (null) n/a       No              (null)                         (null) 
+  DocumentType                        PVAL014                   (null)                 (null)                 String       80        n/a       No              (null)                         (null) 
+  Country                             PVAL016                   (null)                 (null)                 String       80        n/a       No              (null)                         (null) 
+  DmDocumentId                        PVAL017                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  DmVersonNumber                      PVAL018                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+  URLorTextorFileName                 PVAL019                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+ 
+  Mandatory Status Overrides 
+  -------------------------- 
+  HDL overrides the model mandatory status for specific situations. These attributes have had their mandatory status overridden. 
+ 
+                                        Model 
+    Attribute Name                      Mandatory HDL Mandatory   Override Reason 
+    ----------------------------------- --------- --------------- --------------------------------------------------------------------------- 
+    AttachedDocumentId                  n/a       Yes             Primary key attribute is mandatory. 
+    DocumentsOfRecordId                 n/a       Yes             Parent surrogate key is mandatory. 
+ 
+ 
+Hidden Attributes 
+================= 
+These attributes will be hidden from HDL and HSDL customers as the DLoadHidden property is applied to them. 
+ 
+                                                                                                                                     Model 
+  Attribute Name                      Stage Column              SSO Stage              SID Stage              HDL Type Length Scale  Mandatory HDL Mandatory   Table or View Name             Column Name 
+  ----------------------------------- ------------------------- ---------------------- ---------------------- -------- ------ ------ --------- --------------- ------------------------------ ------------------------------ 
+  LegislationCode                     PVAL015                   (null)                 (null)                 String   (null)        n/a       No              (null)                         (null) 
+ 
+These attributes are automatically hidden for all objects. 
+ 
+  None found. 
+ 
+ 
+Rejected Attributes 
+=================== 
+Attributes available on the registered VO that are rejected for use by HDL and HSDL. 
+ 
+  Attribute Name                      ADF Type               Table or View Name             Column Name                    Rejection Reason 
+  ----------------------------------- ---------------------- ------------------------------ ------------------------------ -------------------------------------------------------------------------------- 
+  EntityName                          java.lang.String       (null)                         (null)                         ___READONLY 
+  DocumentRecordId                    java.lang.String       (null)                         (null)                         ___SDO_HIDDEN 
+ 
+ 
+HSDL Attribute Level Annotations 
+================================ 
+Attributes with specific HSDL annotations. 
+ 
+  No security related annotations found. 
+ 
+  LOV Annotations 
+  --------------- 
+  Annotations that identify and specify LOV properties for HSDL templates. 
+ 
+  No LOV detail annotations found. 
+ 
+ 
+EOs Referenced in this VO 
+========================= 
+The entity objects referenced by the VO registered. 
+ 
+  None found. 
+ 
+ 
+Gather Statistics Tables 
+======================== 
+Tables that HDL will gather statistics post data loading. 
+ 
+  None found. 
+ 
+ 
+Local Primary Key 
+================= 
+Attributes that form the primary key for this object. 
+ 
+  AttachedDocumentId 
+ 
+ 
+Local Surrogate ID Analysis 
+=========================== 
+Analysis of the attribute identified as the local surrogate ID. 
+ 
+  Attribute Name         : AttachedDocumentId 
+  Integration Object Name: null 
+  User Keys 
+    [0] DocumentCode, PersonNumber(secure), DataTypeCode, Title, DocumentType, Country 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003, UKVAL_SECURE004, UKVAL_SECURE005, UKVAL_SECURE006 
+    [1] DocumentCode, PersonNumber(secure), DataTypeCode, Title, DocumentType 
+    UK Stage [1] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003, UKVAL_SECURE004, UKVAL_SECURE005 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    DocumentCode                   HR_DOCUMENTS_OF_RECORD         DOCUMENT_CODE                  Parent VO 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    DataTypeCode                   (null)                         (null)                         (null) 
+      ** CAT 2 FAIL : UKL-205: DataTypeCode - AttachedDocumentId - The source table and column for the local user key attribute cannot be identified - transient 
+                               component. 
+      ** CAT 2 FAIL : UKL-105: DataTypeCode - AttachedDocumentId - The user key attribute is not defined on the resolver VO: 
+                               oracle.apps.fnd.applcore.attachments.uiModel.view.AttachmentsVO 
+ 
+    Title                          FND_DOCUMENTS_VL               TITLE                          KeyHelper Resolver VO 
+    DocumentType                   HR_DOCUMENT_TYPES_VL           DOCUMENT_TYPE                  Parent VO 
+    Country                        FND_TERRITORIES_VL             TERRITORY_SHORT_NAME           Parent VO 
+ 
+ 
+Parent Surrogate ID Analysis 
+============================ 
+Analysis of the attribute identified as the parent surrogate ID. 
+ 
+  Attribute Name         : DocumentsOfRecordId 
+  Integration Object Name: DocumentsOfRecord 
+  User Keys 
+    [0] DocumentCode, PersonNumber(secure), DocumentType, Country 
+    UK Stage [0] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003, UKVAL_SECURE004 
+    [1] DocumentCode, PersonNumber(secure), DocumentType 
+    UK Stage [1] UKVAL_SECURE001, UKVAL_SECURE002, UKVAL_SECURE003 
+ 
+  User Key Attribute Source 
+  ------------------------- 
+  The table/view and column where the user key attribute can be found in the database. 
+ 
+    User Key Attribute             Source Table / View            Source Column                  Identified By 
+    ------------------------------ ------------------------------ ------------------------------ ------------------------------ 
+    DocumentCode                   HR_DOCUMENTS_OF_RECORD         DOCUMENT_CODE                  Parent VO 
+    PersonNumber                   PER_ALL_PEOPLE_F               PERSON_NUMBER                  Parent VO 
+    DocumentType                   HR_DOCUMENT_TYPES_VL           DOCUMENT_TYPE                  Parent VO 
+    Country                        FND_TERRITORIES_VL             TERRITORY_SHORT_NAME           Parent VO 
+ 
+ 
+References to Integration Enabled Foreign Objects 
+================================================= 
+Analysis of foreign surrogate IDs that are known to reference integration enabled objects. 
+ 
+  Attribute Name         : DocumentTypeId 
+  Attribute Availability : Accepted 
+  Integration Object Name: DocumentType 
+    Identified by        : DLoadForeignIntegration property [DocumentType;DocumentTypeId] + HRC_INTEGRATION_OBJECTS registry entry for table and column 
+  Referenced Table/View  : HR_DOCUMENT_TYPES_VL 
+  Referenced Column      : DOCUMENT_TYPE_ID 
+  User Keys 
+    [0] DocumentType, Country 
+    [1] DocumentType 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    DocumentType 
+    Country 
+ 
+  Attribute Name         : PersonId 
+  Attribute Availability : Accepted 
+  Integration Object Name: Person 
+    Identified by        : DLoadForeignIntegration property [Person;PersonId] + HRC_INTEGRATION_OBJECTS registry entry for table and column 
+  Referenced Table/View  : PER_PERSONS 
+  Referenced Column      : PERSON_ID 
+  User Keys 
+    [0] PersonNumber 
+ 
+    User Key Attributes 
+    ------------------------------ 
+    PersonNumber 
+ 
+ 
+Other Foreign Object References 
+=============================== 
+Review that these are not references to integration enabled objects.  You can identify integration enabled objects in the HRC_INTEGRATION_OBJECTS table. 
+ 
+  Attribute Name         : LegislationCode 
+  Attribute Availability : HDL Hidden 
+    Identified by        : Resolver VO 
+  Referenced Table/View  : FND_TERRITORIES_VL 
+  Referenced Column      : TERRITORY_CODE 
+ 
+ 
+Lookup Validated Attributes 
+=========================== 
+Review that all lookup validated attributes provide an LOV to expose the lookup type used for validation. 
+ 
+  None found. 
+ 
+ 
