@@ -1,0 +1,2 @@
+Name,File Discriminator,Description,Supported Actions,Date Effectivity,Required for New Records,Parent Object
+"Element Entry with Costing","ElementEntryWithCosting","An element entry holds the actual payroll element and benefits granted to a worker. The costing of an element entry refers to the costing segment information entered for an element entry and is used in payroll processing to create the costing results. You can't upload date-effective history using this object, use the Element Entry object instead.","Create, update and delete","Date effective","Yes",""

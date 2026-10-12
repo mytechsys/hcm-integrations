@@ -1,0 +1,3 @@
+Name,File Discriminator,Description,Supported Actions,Date Effectivity,Required for New Records,Parent Object
+"Element Entry","ElementEntry","An element entry holds the actual payroll element and benefits granted to a worker. These may be ongoing recurring entries, for example, salary, or single period nonrecurring entries such as a bonus.","Create, update and delete","Date effective","Yes",""
+"Element Entry Value","ElementEntryValue","Element entry values are the individual values that are contained in the input values for an element entry. They can be defaulted or entered by a user.","Create, update and delete","Date effective","No","Element Entry"

@@ -1,0 +1,2 @@
+Name,File Discriminator,Description,Supported Actions,Date Effectivity,Required for New Records,Parent Object
+"Object Group Store","ObjectGroupStore","Object groups stores flexfield related information.","Create, update and delete","None","Yes",""

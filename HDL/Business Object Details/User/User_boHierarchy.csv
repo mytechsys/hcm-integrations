@@ -1,0 +1,3 @@
+Name,File Discriminator,Description,Supported Actions,Date Effectivity,Required for New Records,Parent Object
+"User","User","Update requests for the user account for an existing person record.","Create, update and delete","None","Yes",""
+"UserRole","UserRole","A role to add to or remove from a user account when you are adding or removing multiple roles.","Create only","None","No","User"
