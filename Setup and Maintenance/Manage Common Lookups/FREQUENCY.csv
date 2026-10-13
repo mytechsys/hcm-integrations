@@ -1,0 +1,8 @@
+﻿,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,D,10,TRUE,0001-01-01,31-12-4712,Daily,,,,
+,W,20,TRUE,0001-01-01,31-12-4712,Weekly,,,,
+,BW,30,TRUE,0001-01-01,31-12-4712,Biweekly,,,,
+,SM,40,TRUE,0001-01-01,31-12-4712,Semimonthly,,,,
+,M,50,TRUE,0001-01-01,31-12-4712,Monthly,,,,
+,Y,60,TRUE,0001-01-01,31-12-4712,Yearly,,,,

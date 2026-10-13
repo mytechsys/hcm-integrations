@@ -1,0 +1,10 @@
+﻿,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,A-,,TRUE,0001-01-01,31-12-4712,A rhesus negative,,,,
+,A+,,TRUE,0001-01-01,31-12-4712,A rhesus positive,,,,
+,AB-,,TRUE,0001-01-01,31-12-4712,AB rhesus negative,,,,
+,AB+,,TRUE,0001-01-01,31-12-4712,AB rhesus positive,,,,
+,B-,,TRUE,0001-01-01,31-12-4712,B rhesus negative,,,,
+,B+,,TRUE,0001-01-01,31-12-4712,B rhesus positive,,,,
+,O-,,TRUE,0001-01-01,31-12-4712,O rhesus negative,,,,
+,O+,,TRUE,0001-01-01,31-12-4712,O rhesus positive,,,,

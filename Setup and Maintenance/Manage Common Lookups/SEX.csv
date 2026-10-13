@@ -1,0 +1,11 @@
+﻿,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,F,,TRUE,0001-01-01,31-12-4712,Female,,,,
+,ORA_HRX_GENDER_DIVERSE,,TRUE,0001-01-01,31-12-4712,Gender Diverse,,+NZ,,
+,ORA_HRX_INTERSEXUAL,,TRUE,0001-01-01,31-12-4712,Intersexual,,"+AT,DE",,
+,M,,TRUE,0001-01-01,31-12-4712,Male,,,,
+,ORA_HRX_X,,TRUE,0001-01-01,31-12-4712,Nonbinary,,"+US, +CA, +BR",,
+,ORA_HRX_NONSPECIFIC,,TRUE,0001-01-01,31-12-4712,Nonspecific,,+AU,,
+,NS,,TRUE,0001-01-01,31-12-4712,Not specified,,"+DE,GR,NL,NZ",,
+,ORA_HRX_TRANSG,,TRUE,0001-01-01,31-12-4712,Transgender,,+IN,,
+,U,,TRUE,0001-01-01,31-12-4712,Unknown,,"+NL, +MY, +CZ,+TR,+VN,+PK,+BE,+CA, +BR",,

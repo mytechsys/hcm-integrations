@@ -1,0 +1,7 @@
+﻿,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,A,,TRUE,0001-01-01,31-12-4712,Any,,,,
+,D,,TRUE,0001-01-01,31-12-4712,Day,,,,
+,E,,TRUE,0001-01-01,31-12-4712,Evenings,,,,
+,EW,,TRUE,0001-01-01,31-12-4712,Evenings and weekends,,,,
+,W,,TRUE,0001-01-01,31-12-4712,Weekends,,,,

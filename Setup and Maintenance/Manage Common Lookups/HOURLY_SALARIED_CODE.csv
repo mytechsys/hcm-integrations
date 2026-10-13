@@ -1,0 +1,4 @@
+﻿,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,H,,TRUE,0001-01-01,31-12-4712,Hourly,,,,
+,S,,TRUE,0001-01-01,31-12-4712,Salaried,,,,
