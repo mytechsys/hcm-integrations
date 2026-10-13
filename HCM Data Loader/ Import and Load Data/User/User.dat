@@ -1,0 +1,6 @@
+METADATA|User|UserId|PersonId(SourceSystemId)|CredentialsEmailSent|SourceSystemId|SourceSystemOwner|GUID|PersonNumber|Username|Suspended|RoleId|RoleCommonName|AddRemoveRole|GenerateUserAccount|UserCategory
+MERGE|User||SYS2_wkr_NEW_2026_001|Y|SYS2_user_NEW_2026_001|HDL_LOAD||||N||||Y|
+MERGE|User||SYS2_wkr_NEW_2026_002|Y|SYS2_user_NEW_2026_002|HDL_LOAD||||N||||Y|
+METADATA|UserRole|UserRoleId|UserId(SourceSystemId)|RoleCommonName|PersonId(SourceSystemId)|PersonNumber|AddRemoveRole|SourceSystemOwner|SourceSystemId|GUID
+MERGE|UserRole||SYS2_user_NEW_2026_001|ORA_PER_EMPLOYEE_ABSTRACT|SYS2_wkr_NEW_2026_001||ADD|HDL_LOAD|SYS2_user_role_NEW_2026_001|
+MERGE|UserRole||SYS2_user_NEW_2026_002|ORA_PER_EMPLOYEE_ABSTRACT|SYS2_wkr_NEW_2026_002||ADD|HDL_LOAD|SYS2_user_role_NEW_2026_002|
