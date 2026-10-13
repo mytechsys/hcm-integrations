@@ -1,0 +1,9 @@
+,Lookup Code,Display Sequence,Enabled,Start Date,End Date,Meaning,Description,Tag,Lookup values descriptive flexfield,Detail Data
+,,,,,,,,,Lookup_DFF,
+,FUSION,1,TRUE,0001-01-01,31-12-4712,Base System,Base System Owner,,,
+,HDL_LOAD,1,FALSE,01-01-1951,,HDL Loader,HDL Loader,,,
+,HCMQA-001,1,TRUE,01-01-1951,31-12-2012,HDL Source System Owner,HDL Source System Owner,,,
+,HCMGSE-001,1,TRUE,01-01-1901,31-12-2012,HDL Source System Owner1,HDL Source System Owner1,,,
+,MASTER_PAYSLIP,1,TRUE,01-01-2001,31-12-4712,MASTER_PAYSLIP,Load Third party payslips,,,
+,ORA_TALEO,1,TRUE,0001-01-01,31-12-4712,Oracle Taleo Recruiting Integration,Oracle Taleo Recruiting Source System Owner,,,
+,HRC_SQLLOADER,1,TRUE,0001-01-01,31-12-4712,SqlLoader,SQL Loader System Owner,,,
